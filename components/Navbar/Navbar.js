@@ -1,3 +1,4 @@
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import NavLinksContainer from "./NavLinksContainer";
 import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
@@ -12,7 +13,20 @@ export default () => (
       </NavLinksContainer>
       <NavLogo />
       <NavLinksContainer>
-        <span>Hello</span>
+        <a
+          href="https://twitter.com/NinjaLabsUK"
+          className="icon"
+          target="_blank"
+        >
+          <FaTwitter size="1.6em" />
+        </a>
+        <a
+          href="https://github.com/NinjaLabsUK"
+          className="icon"
+          target="_blank"
+        >
+          <FaGithub size="1.6em" />
+        </a>
       </NavLinksContainer>
     </div>
     <style jsx>{`
@@ -29,6 +43,15 @@ export default () => (
         display: flex;
         justify-content: space-between;
         align-items: center;
+      }
+
+      .icon {
+        margin-left: ${SPACING.sm};
+        color: ${COLOURS.black};
+      }
+
+      .icon:hover {
+        color: ${COLOURS.primary};
       }
     `}</style>
   </nav>
