@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CONTAINER_WIDTH } from "../../styles";
 export default () => (
   <div className="container">
-    <Link>
+    <Link href="/">
       <img className="image" src="/static/logo.svg" />
     </Link>
     <style jsx>
