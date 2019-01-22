@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { CONTAINER_WIDTH } from "../../styles";
 export default () => (
   <div className="container">
     <Link>
@@ -9,8 +9,9 @@ export default () => (
       {`
         .container {
           position: absolute;
-          width: 100%;
           text-align: center;
+          width: 100%;
+          max-width: ${CONTAINER_WIDTH};
         }
 
         .image {

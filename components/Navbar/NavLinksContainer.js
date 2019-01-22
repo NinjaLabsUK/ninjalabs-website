@@ -5,6 +5,7 @@ export default ({ children }) => (
       {`
         .container {
           display: flex;
+          z-index: 1;
         }
       `}
     </style>

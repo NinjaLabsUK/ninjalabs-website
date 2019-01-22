@@ -15,3 +15,5 @@ export const SPACING = {
 export const SHADOWS = {
   light: "0px 6px 20px rgba(0, 0, 0, 0.06)"
 };
+
+export const CONTAINER_WIDTH = "1024px";

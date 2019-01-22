@@ -12,7 +12,6 @@ export default ({ title, href }) => (
         padding: ${SPACING.xs} ${SPACING.sm};
         text-decoration: none;
         color: ${COLOURS.darkGrey};
-        border-radius: 4px;
       }
 
       a:hover {
