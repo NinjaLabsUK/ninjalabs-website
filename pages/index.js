@@ -1,2 +1,8 @@
 import Layout from "../components/Layout";
-export default () => <Layout>Home Page</Layout>;
+import Container from "../components/Container";
+
+export default () => (
+  <Layout>
+    <Container>Home page</Container>
+  </Layout>
+);
