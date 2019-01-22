@@ -1,6 +1,9 @@
 export const COLOURS = {
   white: "#FFFFFF",
-  black: "#000000"
+  black: "#000000",
+  darkGrey: "#5a5a5a",
+  grey: "#8e8e8e",
+  lightGrey: "#e8e8e8"
 };
 
 export const SPACING = {

@@ -4,8 +4,8 @@ import { COLOURS, SHADOWS, SPACING } from "../../styles";
 
 export default () => (
   <nav>
-    <NavLink />
-    <NavLink />
+    <NavLink title="Posts" href="/posts" />
+    <NavLink title="Playground" href="/playground" />
     <NavLogo />
     <style jsx>{`
       nav {
