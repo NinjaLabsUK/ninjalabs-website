@@ -8,7 +8,7 @@ export default ({ children }) => (
       <title>Ninja Labs</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
-        href="https://fonts.googleapis.com/css?family=Arimo"
+        href="https://fonts.googleapis.com/css?family=Rubik"
         rel="stylesheet"
       />
     </Head>
