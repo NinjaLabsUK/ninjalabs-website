@@ -1,16 +1,15 @@
-import CurrentPosition from "./CurrentPosition";
 import { COLOURS, SPACING } from "../styles";
-import reactLogo from "../static/react.png";
-import nodeLogo from "../static/node-logo.png";
-import angularLogo from "../static/angular-logo.png";
 
 export default () => (
   <section className="hero">
     <h1>Freelance Developer</h1>
     <div className="tech-stack">
-      <img style={{ width: "100px" }} src={reactLogo} />
-      <img style={{ width: "100px" }} src={nodeLogo} />
-      <img style={{ width: "65px", margin: "6px 10px" }} src={angularLogo} />
+      <img style={{ width: "100px" }} src="/static/react.png" />
+      <img style={{ width: "100px" }} src="/static/node-logo.png" />
+      <img
+        style={{ width: "65px", margin: "6px 10px" }}
+        src="/static/angular-logo.png"
+      />
     </div>
     <style jsx>
       {`

@@ -1,5 +1,4 @@
 import { COLOURS, SPACING } from "../styles";
-import bookingGo from "../static/bookinggo.png";
 
 export default () => (
   <div className="container">
@@ -10,7 +9,7 @@ export default () => (
       dealing with React and NodeJS.
     </p>
     <div style={{ textAlign: "right" }}>
-      <img src={bookingGo} />
+      <img src="/static/bookinggo.png" />
     </div>
     <style jsx>
       {`

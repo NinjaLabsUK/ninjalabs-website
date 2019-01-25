@@ -1,13 +1,13 @@
 {
   "name": "ninjalabs-website",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Ninja Labs NextJS website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "repository": {
     "type": "git",
