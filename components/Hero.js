@@ -1,3 +1,4 @@
+import CurrentPosition from "./CurrentPosition";
 import { COLOURS, SPACING } from "../styles";
 import reactLogo from "../static/react.png";
 import nodeLogo from "../static/node-logo.png";
@@ -32,7 +33,7 @@ export default () => (
 
         h1 {
           margin: 0;
-          font-weight: normal;
+
           font-size: 2.4rem;
           color: ${COLOURS.white};
           display: block;

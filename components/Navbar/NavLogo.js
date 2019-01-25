@@ -14,6 +14,12 @@ export default () => (
           max-width: ${CONTAINER_WIDTH};
         }
 
+        @media only screen and (max-width: 480px) {
+          .container {
+            display: none;
+          }
+        }
+
         .image {
           max-width: 175px;
         }
