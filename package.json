@@ -22,7 +22,6 @@
   "homepage": "https://github.com/NinjaLabsUK/ninjalabs-website#readme",
   "dependencies": {
     "next": "^7.0.2",
-    "next-images": "^1.0.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-icons": "^3.3.0"
