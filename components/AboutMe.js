@@ -26,7 +26,7 @@ export default () => (
       <h3>Frontend Software Engineer</h3>
       <p className="current-position-text">
         Currently working on Booking.com Taxis at BookingGo in Manchester.
-        Primarily workink with React and NodeJS.
+        Primarily working with React and NodeJS.
       </p>
       <img className="current-position-image" src="/static/bookinggo.png" />
     </div>
@@ -48,12 +48,12 @@ export default () => (
         }
 
         .aboutme-container {
-          flex: 3;
+          flex: 3 0 50%;
           padding: ${SPACING.md};
         }
 
         .current-position-container {
-          flex: 2;
+          flex: 2 0 40%;
           padding: ${SPACING.md};
         }
 

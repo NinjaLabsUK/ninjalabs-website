@@ -19,6 +19,7 @@ export default () => (
           justify-content: center;
           flex-direction: column;
           min-height: 350px;
+          padding: ${SPACING.md};
           background: linear-gradient(
                 90deg,
                 ${COLOURS.darkerGrey} 20px,
@@ -32,7 +33,7 @@ export default () => (
 
         h1 {
           margin: 0;
-
+          text-align: center;
           font-size: 2.4rem;
           color: ${COLOURS.white};
           display: block;
