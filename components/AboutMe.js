@@ -50,13 +50,11 @@ export default () => (
         .aboutme-container {
           flex: 3;
           padding: ${SPACING.md};
-          min-width: 500px;
         }
 
         .current-position-container {
           flex: 2;
           padding: ${SPACING.md};
-          min-width: 400px;
         }
 
         .current-position-text {
