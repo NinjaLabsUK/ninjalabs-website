@@ -26,6 +26,6 @@ export const CARD_SIZES = {
   md: "500px"
 };
 
-export const BORDER_RADIUS = "3px";
+export const BORDER_RADIUS = "8px";
 
 export const CONTAINER_WIDTH = "1024px";

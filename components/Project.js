@@ -14,11 +14,14 @@ export default ({ title, description, image }) => (
       {`
         .container {
           display: flex;
+          justify-content: center;
+          align-items: center;
           flex-wrap: wrap;
         }
 
         .image-container {
           padding: ${SPACING.md};
+          flex: 0 350px;
         }
 
         .image {
@@ -28,6 +31,7 @@ export default ({ title, description, image }) => (
 
         .about-container {
           padding: ${SPACING.md};
+          flex: 1 400px;
         }
 
         .title {

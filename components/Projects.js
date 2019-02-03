@@ -12,20 +12,27 @@ const PROJECTS = [
 
 export default () => (
   <div className="container">
-    <h2>Projects</h2>
-    {PROJECTS.map(project => (
-      <Project
-        title={project.title}
-        description={project.description}
-        image={project.image}
-      />
-    ))}
+    <div className="wrapper">
+      <h2>Projects</h2>
+      {PROJECTS.map(project => (
+        <Project
+          key={project.title}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+        />
+      ))}
+    </div>
     <style jsx>
       {`
         .container {
           background-color: ${COLOURS.darkerGrey};
           color: ${COLOURS.white};
           padding: ${SPACING.sm};
+          margin: 0 auto;
+        }
+
+        .wrapper {
           max-width: ${CONTAINER_WIDTH};
           margin: 0 auto;
         }
