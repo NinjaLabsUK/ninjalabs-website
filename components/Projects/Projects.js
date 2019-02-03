@@ -1,11 +1,11 @@
 import Project from "./Project";
-import { COLOURS, SPACING, CONTAINER_WIDTH } from "../styles";
+import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
 
 const PROJECTS = [
   {
     title: "rFactor 2 Overlay",
     description:
-      "rFactor 2 is a racing simulator and has started to grow an Esports scene. As such, these races tend to be streamed so information needs to be fed back to the viewers. This overlay is written in Angular and fetches, processes and views data provided by a plugin running on the simulator.",
+      "rFactor 2 is a racing simulator and has started to grow an Esports scene. As such, these races tend to be streamed so information needs to be fed back to the viewers. This overlay is written in Angular and fetches, processes and views data provided by a plugin running on the simulator. Blah blah blah",
     image: "/static/rf2.jpeg"
   }
 ];
@@ -28,7 +28,7 @@ export default () => (
         .container {
           background-color: ${COLOURS.darkerGrey};
           color: ${COLOURS.white};
-          padding: ${SPACING.sm};
+          padding: ${SPACING.lg};
           margin: 0 auto;
         }
 
@@ -38,7 +38,8 @@ export default () => (
         }
 
         h2 {
-          text-align: center;
+          margin: 0;
+          margin-bottom: ${SPACING.lg};
         }
       `}
     </style>

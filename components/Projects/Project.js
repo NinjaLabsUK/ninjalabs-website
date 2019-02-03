@@ -1,4 +1,4 @@
-import { BORDER_RADIUS, SPACING } from "../styles";
+import { BORDER_RADIUS, SPACING } from "../../styles";
 
 export default ({ title, description, image }) => (
   <div className="container">

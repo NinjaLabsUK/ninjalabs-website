@@ -34,7 +34,6 @@ export default () => (
         h1 {
           margin: 0;
           text-align: center;
-          font-size: 2.4rem;
           color: ${COLOURS.white};
           display: block;
           margin-bottom: ${SPACING.sm};
