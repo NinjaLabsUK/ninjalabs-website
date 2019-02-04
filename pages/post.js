@@ -1,8 +1,14 @@
+import { withRouter } from "next/router";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 
-export default () => (
-  <Layout>
-    <Container>Post page</Container>
-  </Layout>
-);
+const post = ({ router }) => {
+  const id = router.query.id;
+  return (
+    <Layout>
+      <Container>Post page {id}</Container>
+    </Layout>
+  );
+};
+
+export default withRouter(post);
