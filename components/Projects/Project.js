@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { BORDER_RADIUS, SPACING, COLOURS } from "../../styles";
 
-export default ({ title, description, image }) => (
+export default ({ title, description, image, link }) => (
   <div className="container">
     <div className="image-container">
       <img src={image} className="image" />
@@ -11,7 +11,7 @@ export default ({ title, description, image }) => (
       <p>{description}</p>
       
       
-        <Link href="" className="more-link">
+        <Link href={link.href} as={link.as}>
         <a className="more-link">Read more</a>
         </Link>
       
