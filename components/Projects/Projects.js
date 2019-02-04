@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     title: "rFactor 2 Overlay",
     description:
-      "rFactor 2 is a racing simulator and has started to grow an Esports scene. As such, these races tend to be streamed so information needs to be fed back to the viewers. This overlay is written in Angular and fetches, processes and views data provided by a plugin running on the simulator. Blah blah blah",
+      "rFactor 2 is a racing simulator and has started to grow an Esports scene. As such, these races tend to be streamed so information needs to be fed back to the viewers. This overlay is written in Angular and fetches, processes and views data provided by a plugin running on the simulator.",
     image: "/static/rf2.jpeg"
   }
 ];
@@ -40,6 +40,7 @@ export default () => (
         h2 {
           margin: 0;
           margin-bottom: ${SPACING.lg};
+          text-align: center;
         }
       `}
     </style>

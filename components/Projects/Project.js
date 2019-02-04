@@ -1,4 +1,5 @@
-import { BORDER_RADIUS, SPACING } from "../../styles";
+import Link from 'next/link'
+import { BORDER_RADIUS, SPACING, COLOURS } from "../../styles";
 
 export default ({ title, description, image }) => (
   <div className="container">
@@ -8,6 +9,12 @@ export default ({ title, description, image }) => (
     <div className="about-container">
       <h3 className="title">{title}</h3>
       <p>{description}</p>
+      
+      
+        <Link href="" className="more-link">
+        <a className="more-link">Read more</a>
+        </Link>
+      
     </div>
 
     <style jsx>
@@ -20,12 +27,11 @@ export default ({ title, description, image }) => (
         }
 
         .image-container {
-          padding: ${SPACING.md};
-          flex: 0 350px;
+          flex: 0 300px;
         }
 
         .image {
-          max-width: 350px;
+          max-width: 100%;
           border-radius: ${BORDER_RADIUS};
         }
 
@@ -36,6 +42,10 @@ export default ({ title, description, image }) => (
 
         .title {
           margin: 0;
+        }
+
+        .more-link {
+          color: ${COLOURS.lightGrey};
         }
       `}
     </style>

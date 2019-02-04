@@ -8,11 +8,11 @@ export default () => (
       }
 
       h1 {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
 
       h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
       }
     `}
   </style>
