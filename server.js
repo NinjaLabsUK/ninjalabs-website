@@ -11,14 +11,12 @@ app
     const server = express();
 
     server.get("/post/:id", (req, res) => {
-      console.log(req);
       const actualPage = "/post";
       const queryParams = { id: req.params.id };
       app.render(req, res, actualPage, queryParams);
     });
 
     server.get("*", (req, res) => {
-      console.log(req);
       return handle(req, res);
     });
 
