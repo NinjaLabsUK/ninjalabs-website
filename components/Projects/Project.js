@@ -2,8 +2,8 @@ import Dynamic from "next/dynamic";
 import Link from "next/link";
 import { BORDER_RADIUS, SPACING, COLOURS } from "../../styles";
 
-export default ({ id, title, description, image }) => {
-  const Description = Dynamic(() => import(`../../md/${id}/preview.mdx`));
+export default ({ id, title, image }) => {
+  //const Description = Dynamic(() => import(`../../md/${id}/preview.mdx`));
   return (
     <div className="container">
       <div className="image-container">
@@ -11,7 +11,7 @@ export default ({ id, title, description, image }) => {
       </div>
       <div className="about-container">
         <h3 className="title">{title}</h3>
-        <Description />
+        {/* <Description /> */}
 
         <Link href={`/post?id=${id}`} as={`/post/${id}`}>
           <a className="more-link">Read more</a>
