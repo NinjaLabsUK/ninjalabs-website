@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "Ninja Labs NextJS website",
   "main": "index.js",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js",
     "build": "next build",
+    "now-build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
   "repository": {
@@ -24,7 +31,7 @@
     "@mdx-js/mdx": "^0.15.0",
     "@zeit/next-mdx": "^1.2.0",
     "express": "^4.16.4",
-    "next": "^7.0.2",
+    "next": "canary",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-icons": "^3.3.0",
