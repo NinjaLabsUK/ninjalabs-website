@@ -1,17 +1,15 @@
-import { withRouter } from "next/router";
 import Dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import { BORDER_RADIUS } from "../styles";
 
-const post = ({ router }) => {
-  const id = router.query.id;
-  const Post = Dynamic(() => import(`../md/${id}/post.mdx`));
-
+const Post = ({ id }) => {
+  const Content = Dynamic(() => import(`../md/${id}/post.mdx`));
   return (
     <Layout>
       <Container>
-        <Post
+        <p>PostID: {id}</p>
+        <Content
           components={{
             h1: props => <h1 style={{ textAlign: "center" }} {...props} />,
             img: props => (
@@ -32,4 +30,8 @@ const post = ({ router }) => {
   );
 };
 
-export default withRouter(post);
+Post.getInitialProps = async ({ query }) => {
+  return { id: query.id };
+};
+
+export default Post;

@@ -1,11 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "package.json", "use": "@now/next" }],
   "alias": ["ninja-labs.co.uk"],
-  "routes": [
-    {
-      "src": "/post/(?<id>[^/]+)$",
-      "dest": "/post?id=$id"
-    }
-  ]
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "routes": [{ "src": "/post/(?<id>[^/]+)$", "dest": "/post?id=$id" }]
 }
