@@ -1,34 +1,76 @@
-import Dynamic from "next/dynamic";
+import { PureComponent, Fragment } from "react";
+import Prismic from "prismic-javascript";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import { BORDER_RADIUS } from "../styles";
 
-const Post = ({ id }) => {
-  const Content = Dynamic(() => import(`../md/${id}/post.mdx`));
-  return (
-    <Layout>
-      <Container>
-        <p>PostID: {id}</p>
-        <Content
-          components={{
-            h1: props => <h1 style={{ textAlign: "center" }} {...props} />,
-            img: props => (
+class Post extends PureComponent {
+  state = {
+    post: null,
+    loading: true
+  };
+
+  componentDidMount() {
+    this.fetchPost();
+  }
+
+  fetchPost = () => {
+    const { id } = this.props;
+
+    Prismic.getApi("https://ninjalabs.prismic.io/api/v2")
+      .then(api => api.getByID("XKPAiBAAAKsKKqjN"))
+      .then(response => {
+        const { data } = response;
+        console.log(data);
+        //const { title } = data
+        this.setState(
+          {
+            post: {
+              title: data.title[0].text,
+              mainImage: data.main_image,
+              body: data.body
+            },
+            loading: false
+          },
+          () => console.log(this.state)
+        );
+      });
+  };
+
+  render() {
+    const { post } = this.state;
+    return (
+      <Layout>
+        <Container padding={false}>
+          {post && (
+            <Fragment>
               <img
                 style={{
                   display: "block",
-                  maxWidth: "80%",
-                  margin: "0 auto",
-                  borderRadius: BORDER_RADIUS
+                  maxWidth: "1600px",
+                  width: "100%",
+                  margin: "0 auto"
                 }}
-                {...props}
+                src={post.mainImage.url}
+                alt={post.mainImage.alt}
               />
-            )
-          }}
-        />
-      </Container>
-    </Layout>
-  );
-};
+              <div style={{ padding: "0.8rem" }}>
+                <h2>{post.title}</h2>
+                {post.body.map(chunk => {
+                  if (chunk.type === "paragraph") {
+                    return <p>{chunk.text}</p>;
+                  }
+
+                  return null;
+                })}
+              </div>
+            </Fragment>
+          )}
+        </Container>
+      </Layout>
+    );
+  }
+}
 
 Post.getInitialProps = async ({ query }) => {
   return { id: query.id };
