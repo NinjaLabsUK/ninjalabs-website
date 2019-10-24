@@ -3,7 +3,7 @@ import { CONTAINER_WIDTH } from "../../styles";
 export default () => (
   <div className="container">
     <Link href="/">
-      <img className="image" src="/static/logo.svg" />
+      <img className="image" src="/logo.svg" />
     </Link>
     <style jsx>
       {`

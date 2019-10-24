@@ -8,14 +8,14 @@ export default () => (
       <p>
         I've been a developer for about 4 and a half years. I started off as an
         apprentice after I finished college in 2014 and since then I've been
-        able to work my way to a much bigger team at Booking.com Taxis.
+        able to work my way to where I am now at Booking.com Taxis.
       </p>
       <p>My strongest skills include:</p>
       <ul>
         <li>React</li>
-        <li>Angular & Typescript</li>
         <li>Node.js</li>
         <li>Express</li>
+        <li>Angular & Typescript</li>
         <li>AWS Lambda + Serverless</li>
         <li>MongoDB</li>
       </ul>
@@ -28,7 +28,7 @@ export default () => (
         Currently working on Booking.com Taxis at BookingGo in Manchester.
         Primarily working with React and NodeJS.
       </p>
-      <img className="current-position-image" src="/static/bookinggo.png" />
+      <img className="current-position-image" src="/bookinggo.png" />
     </div>
 
     <style jsx>

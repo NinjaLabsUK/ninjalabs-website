@@ -2,14 +2,10 @@ import { COLOURS, SPACING } from "../styles";
 
 export default () => (
   <section className="hero">
-    <h1>Freelance Developer</h1>
+    <h1>Frontend Engineer</h1>
     <div className="tech-stack">
-      <img style={{ width: "100px" }} src="/static/react.png" />
-      <img style={{ width: "100px" }} src="/static/node-logo.png" />
-      <img
-        style={{ width: "65px", margin: "6px 10px" }}
-        src="/static/angular-logo.png"
-      />
+      <img style={{ width: "100px" }} src="/react.png" />
+      <img style={{ width: "100px" }} src="/node-logo.png" />
     </div>
     <style jsx>
       {`

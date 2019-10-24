@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     id: "rfactor2-overlay",
     title: "rFactor 2 Overlay",
-    image: "/static/rf2.jpeg"
+    image: "/rf2.jpeg"
   }
 ];
 
