@@ -4,7 +4,20 @@ export default () => (
       body {
         padding: 0;
         margin: 0;
-        font-family: "Work Sans", sans-serif;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      div {
+        box-sizing: border-box;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
       }
 
       h1 {

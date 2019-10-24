@@ -1,44 +1,42 @@
+import Card from "./Card";
+import Container from "./Container";
 import { COLOURS, SPACING } from "../styles";
 
 export default () => (
-  <section className="hero">
-    <h1>Frontend Engineer</h1>
-    <div className="tech-stack">
-      <img style={{ width: "100px" }} src="/react.png" />
-      <img style={{ width: "100px" }} src="/node-logo.png" />
-    </div>
+  <div className="hero">
+    <Container>
+      <h1 className="hero__title">Kieran Chadwick</h1>
+      <h2 className="hero__subtitle">
+        Frontend Software Engineer - Booking.com
+      </h2>
+
+      <div className="hero__tech-stack">
+        <img style={{ width: "100px" }} src="/react.png" />
+        <img style={{ width: "100px" }} src="/node-logo.png" />
+      </div>
+    </Container>
     <style jsx>
       {`
         .hero {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          min-height: 350px;
-          padding: ${SPACING.md};
-          background: linear-gradient(
-                90deg,
-                ${COLOURS.darkerGrey} 20px,
-                transparent 1%
-              )
-              center,
-            linear-gradient(${COLOURS.darkerGrey} 20px, transparent 1%) center,
-            ${COLOURS.darkGrey};
+          padding: ${SPACING.medium};
+          background: ${COLOURS.darkGrey};
           background-size: 22px 22px;
         }
 
-        h1 {
-          margin: 0;
-          text-align: center;
+        .hero__title {
           color: ${COLOURS.white};
-          display: block;
-          margin-bottom: ${SPACING.sm};
+          margin: 0;
         }
 
-        .tech-stack {
-          margin-top: ${SPACING.md};
+        .hero__subtitle {
+          color: ${COLOURS.white};
+          font-size: 24px;
+        }
+
+        .hero__tech-stack {
+          margin-top: ${SPACING.medium};
         }
       `}
     </style>
-  </section>
+  </div>
 );

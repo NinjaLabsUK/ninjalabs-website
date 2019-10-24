@@ -1,10 +1,10 @@
-import Project from "./Project";
 import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
+import { ProjectCard } from ".";
 
 const PROJECTS = [
   {
     id: "rfactor2-overlay",
-    title: "rFactor 2 Overlay",
+    title: "rFactor 2 Broadcast Overlay",
     image: "/rf2.jpeg"
   }
 ];
@@ -12,9 +12,9 @@ const PROJECTS = [
 export default () => (
   <div className="container">
     <div className="wrapper">
-      <h2>Projects</h2>
+      <h2>My Projects</h2>
       {PROJECTS.map(project => (
-        <Project
+        <ProjectCard
           key={project.id}
           id={project.id}
           title={project.title}
@@ -25,9 +25,9 @@ export default () => (
     <style jsx>
       {`
         .container {
-          background-color: ${COLOURS.darkerGrey};
+          background-color: ${COLOURS.darkGrey};
           color: ${COLOURS.white};
-          padding: ${SPACING.lg};
+          padding: ${SPACING.largest} ${SPACING.larger};
           margin: 0 auto;
         }
 
@@ -37,9 +37,7 @@ export default () => (
         }
 
         h2 {
-          margin: 0;
-          margin-bottom: ${SPACING.lg};
-          text-align: center;
+          margin-bottom: ${SPACING.large};
         }
       `}
     </style>

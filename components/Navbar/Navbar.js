@@ -39,14 +39,14 @@ export default () => (
         height: 75px;
         max-width: ${CONTAINER_WIDTH};
         margin: 0 auto;
-        padding: 0 ${SPACING.sm};
+        padding: 0 ${SPACING.small};
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
 
       .icon {
-        margin-left: ${SPACING.sm};
+        margin-left: ${SPACING.small};
         color: ${COLOURS.black};
       }
 

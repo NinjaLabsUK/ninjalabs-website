@@ -3,12 +3,12 @@ import Navbar from "./Navbar";
 import GlobalStyles from "./GlobalStyles";
 
 export default ({ children }) => (
-  <div>
+  <>
     <Head>
       <title>Ninja Labs</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
-        href="https://fonts.googleapis.com/css?family=Work+Sans"
+        href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
         rel="stylesheet"
       />
       <link
@@ -91,5 +91,5 @@ export default ({ children }) => (
     <Navbar />
     {children}
     <GlobalStyles />
-  </div>
+  </>
 );

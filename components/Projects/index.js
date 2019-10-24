@@ -1,5 +1,5 @@
 import Projects from "./Projects";
-import Project from "./Project";
+import ProjectCard from "./ProjectCard";
 
 export default Projects;
-export { Project };
+export { ProjectCard };

@@ -9,10 +9,10 @@ export default ({ title, href }) => (
     </Link>
     <style jsx>{`
       .link {
-        padding: ${SPACING.xs};
+        padding: ${SPACING.smaller};
         text-decoration: none;
         color: ${COLOURS.darkGrey};
-        margin-right: ${SPACING.sm};
+        margin-right: ${SPACING.small};
       }
 
       .link:hover {

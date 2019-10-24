@@ -3,27 +3,36 @@ import {
   SHADOWS,
   BORDER_RADIUS,
   SPACING,
-  CARD_SIZES
+  BREAKPOINTS
 } from "../styles";
 
-export default ({ children, title, size = "md" }) => (
+const Card = ({ children, title }) => (
   <div className="card">
     <h2 className="card-title">{title}</h2>
     {children}
     <style jsx>
       {`
         .card {
-          box-shadow: ${SHADOWS.medium};
+          box-shadow: ${SHADOWS.light};
           background-color: ${COLOURS.white};
           border-radius: ${BORDER_RADIUS};
-          padding: ${SPACING.md};
-          max-width: ${CARD_SIZES[size]};
+          padding: ${SPACING.larger};
+          max-width: 100%;
+        }
+
+        @media (max-width: ${BREAKPOINTS.mobile}) {
+          .card {
+            padding: ${SPACING.large};
+          }
         }
 
         .card-title {
-          margin: 0;
+          margin-top: 0;
+          margin-bottom: ${SPACING.medium};
         }
       `}
     </style>
   </div>
 );
+
+export default Card;
