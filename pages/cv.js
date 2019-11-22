@@ -102,7 +102,7 @@ const cv = () => {
           <img
             src={selectedJob.imgSrc}
             style={{
-              maxWidth: "200px",
+              maxWidth: "180px",
               maxHeight: "70px",
               marginBottom: SPACING.medium
             }}
