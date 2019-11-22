@@ -1,23 +1,45 @@
+import Button from "./Button";
 import { SPACING, SHADOWS, FONT_SIZE } from "../styles";
 
-const JobCard = ({ companyName, position, description, colour }) => (
+const JobCard = ({
+  companyName,
+  position,
+  description,
+  colour,
+  onMoreClick
+}) => (
   <div className="job-card">
-    <h3 className="job-card__title">{companyName}</h3>
-    <p className="job-card__subtitle">{position}</p>
+    <div className="job-card__wrapper">
+      <div className="job-card__content">
+        <h3 className="job-card__title">{companyName}</h3>
+        <p className="job-card__subtitle">{position}</p>
 
-    <p className="job-card__description">{description}</p>
+        <p className="job-card__description">{description}</p>
+      </div>
+
+      <div className="job-card__actions">
+        <Button text="Read more" onClick={onMoreClick} variant="link" />
+      </div>
+    </div>
 
     <style jsx>{`
       .job-card {
         box-shadow: ${SHADOWS.light};
         width: 280px;
-        height: 240px;
+        height: 250px;
         padding: ${SPACING.medium};
         margin: ${SPACING.medium} ${SPACING.small};
         display: inline-block;
         white-space: normal;
         vertical-align: top;
         border-bottom: 4px solid ${colour};
+      }
+
+      .job-card__wrapper {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
       .job-card__title {

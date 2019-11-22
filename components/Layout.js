@@ -37,6 +37,7 @@ const Layout = ({ children }) => (
     </div>
     <Navbar />
     {children}
+    <div id="modal"></div>
     <GlobalStyles />
   </>
 );

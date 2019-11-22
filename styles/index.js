@@ -10,8 +10,10 @@ export const COLOURS = {
   darkerGrey: "#141414",
   darkGrey: "#212121",
   grey: "#8e8e8e",
+  blue: "#1d25f5",
   lightGrey: "#e8e8e8",
-  primary: "#fbe102"
+  primary: "#fbe102",
+  overlay: "rgba(0, 0, 0, 0.75)"
 };
 
 export const SPACING = {

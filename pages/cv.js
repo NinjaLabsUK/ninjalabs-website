@@ -1,8 +1,35 @@
+import { useState } from "react";
+
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import AboutMe from "../components/AboutMe";
 import JobCard from "../components/JobCard";
+import BottomMoal from "../components/BottomModal";
 import { COLOURS, SPACING, FONT_SIZE, SHADOWS, BREAKPOINTS } from "../styles";
+
+const JOBS = [
+  {
+    companyName: "Booking.com",
+    position: "Frontend Software Engineer",
+    description:
+      " Doing some stuff here and there. Working on the Taxi dispatch team managing the development Booking.com Taxi Partner Portal",
+    colour: "#113480"
+  },
+  {
+    companyName: "The Robert Street Hub",
+    position: "Software Developer",
+    description:
+      "Working on fashion site ISAWITFIRST as part of a small team. Working in a high pressure environment getting features finished and tested.",
+    colour: "#fbdd02"
+  },
+  {
+    companyName: "ADXBA",
+    position: "Software Developer",
+    description:
+      "Started my apprenticeship here in 2014. Here I was able to determine what languages I enjoyed working with and was a huge part in deciding what I wanted to pursue as a developer.",
+    colour: "#6c4b71"
+  }
+];
 
 const Heading = () => (
   <>
@@ -57,31 +84,24 @@ const Heading = () => (
 );
 
 const cv = () => {
+  const [selectedJob, setSelectedJob] = useState(null);
+
   return (
     <Layout>
+      {selectedJob && (
+        <BottomMoal
+          title={selectedJob.companyName}
+          onClose={() => setSelectedJob(null)}
+        />
+      )}
       <Heading />
 
       <Container>
         <AboutMe />
         <div className="cv__jobs">
-          <JobCard
-            companyName="Booking.com"
-            position="Frontend Software Engineer"
-            description=" Doing some stuff here and there. Working on the Taxi dispatch team managing the development Booking.com Taxi Partner Portal"
-            colour="#113480"
-          />
-          <JobCard
-            companyName="The Robert Street Hub"
-            position="Software Developer"
-            description="Working on fashion site ISAWITFIRST as part of a small team. Working in a high pressure environment getting features finished and tested."
-            colour="#fbdd02"
-          />
-          <JobCard
-            companyName="ADXBA"
-            position="Software Developer"
-            description="Started my apprenticeship here in 2014. Here I was able to determine what languages I enjoyed working with and was a huge part in deciding what I wanted to pursue as a developer."
-            colour="#6c4b71"
-          />
+          {JOBS.map(job => (
+            <JobCard {...job} onMoreClick={() => setSelectedJob(job)} />
+          ))}
         </div>
 
         <h2>Education 😴</h2>
