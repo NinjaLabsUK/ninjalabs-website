@@ -22,10 +22,10 @@
   "homepage": "https://github.com/NinjaLabsUK/ninjalabs-website#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "next": "^9.1.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-icons": "^3.3.0",
-    "three": "^0.109.0"
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "three": "^0.110.0"
   }
 }
