@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 
 import Container from "./Container";
 import Button from "./Button";
-import { COLOURS } from "../styles";
+import { COLOURS, SPACING } from "../styles";
 
 const Portal = ({ children }) => {
   const portalRef = useRef();
@@ -22,9 +22,11 @@ const BottomModal = ({ title, onClose, children }) => (
     <div className="bottom-modal">
       <div className="bottom-modal__content">
         <Container>
-          <h2 className="bottom-modal__title">{title}</h2>
+          {title && <h2 className="bottom-modal__title">{title}</h2>}
           {children}
-          <Button text="Ok" onClick={onClose} />
+          <div className="bottom-modal__actions">
+            <Button text="Ok" onClick={onClose} />
+          </div>
         </Container>
       </div>
       <style jsx>{`
@@ -43,10 +45,15 @@ const BottomModal = ({ title, onClose, children }) => (
           bottom: 0;
           position: absolute;
           width: 100%;
+          color: ${COLOURS.white};
         }
 
         .bottom-modal__title {
           color: ${COLOURS.white};
+        }
+
+        .bottom-modal__actions {
+          margin-top: ${SPACING.medium};
         }
       `}</style>
     </div>
