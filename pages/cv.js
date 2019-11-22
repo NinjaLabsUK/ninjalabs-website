@@ -110,13 +110,18 @@ const cv = () => {
           <div>{selectedJob.longDescription}</div>
         </BottomMoal>
       )}
+
       <Heading />
 
       <Container>
         <AboutMe />
         <div className="cv__jobs">
-          {JOBS.map(job => (
-            <JobCard {...job} onMoreClick={() => setSelectedJob(job)} />
+          {JOBS.map((job, index) => (
+            <JobCard
+              key={`job-${index}`}
+              {...job}
+              onMoreClick={() => setSelectedJob(job)}
+            />
           ))}
         </div>
 
