@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 import GlobalStyles from "./GlobalStyles";
+import { SPACING, COLOURS } from "../styles";
 
 export default ({ children }) => (
   <>
@@ -88,6 +89,16 @@ export default ({ children }) => (
       />
       <meta name="theme-color" content="#ffffff" />
     </Head>
+    <div
+      style={{
+        width: "100%",
+        background: COLOURS.primary,
+        padding: SPACING.small,
+        textAlign: "center"
+      }}
+    >
+      Under construction!
+    </div>
     <Navbar />
     {children}
     <GlobalStyles />

@@ -1,8 +1,9 @@
 import Link from "next/link";
+
 import { BORDER_RADIUS, SPACING, COLOURS, FONT_SIZE } from "../../styles";
 
-const ProjectCard = ({ id, title, image }) => {
-  return (
+const ProjectCard = ({ id, title, image }) => (
+  <Link href={`/post?id=${id}`} as={`/post/${id}`}>
     <div className="project-card">
       <div className="title-container">
         <h3 className="title">{title}</h3>
@@ -12,10 +13,6 @@ const ProjectCard = ({ id, title, image }) => {
         <img src={image} className="image" />
       </div>
 
-      {/* <Link href={`/post?id=${id}`} as={`/post/${id}`}>
-          <a className="more-link">Read more</a>
-        </Link> */}
-
       <style jsx>
         {`
           .project-card {
@@ -24,6 +21,7 @@ const ProjectCard = ({ id, title, image }) => {
             border-radius: ${BORDER_RADIUS};
             max-width: 300px;
             position: relative;
+            color: ${COLOURS.white};
           }
 
           .project-card:hover {
@@ -67,7 +65,7 @@ const ProjectCard = ({ id, title, image }) => {
         `}
       </style>
     </div>
-  );
-};
+  </Link>
+);
 
 export default ProjectCard;

@@ -11,8 +11,8 @@ const PROJECTS = [
 
 export default () => (
   <div className="container">
+    <h2>My Projects</h2>
     <div className="wrapper">
-      <h2>My Projects</h2>
       {PROJECTS.map(project => (
         <ProjectCard
           key={project.id}
@@ -25,19 +25,18 @@ export default () => (
     <style jsx>
       {`
         .container {
-          background-color: ${COLOURS.darkGrey};
-          color: ${COLOURS.white};
-          padding: ${SPACING.largest} ${SPACING.larger};
           margin: 0 auto;
         }
 
         .wrapper {
-          max-width: ${CONTAINER_WIDTH};
-          margin: 0 auto;
+          padding: ${SPACING.largest} ${SPACING.larger};
+          background-color: ${COLOURS.darkGrey};
         }
 
         h2 {
-          margin-bottom: ${SPACING.large};
+          color: ${COLOURS.darkGrey};
+          margin-left: ${SPACING.larger};
+          margin-bottom: ${SPACING.medium};
         }
       `}
     </style>

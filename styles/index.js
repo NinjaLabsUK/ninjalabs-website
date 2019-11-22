@@ -11,7 +11,7 @@ export const COLOURS = {
   darkGrey: "#212121",
   grey: "#8e8e8e",
   lightGrey: "#e8e8e8",
-  primary: "#ff6100"
+  primary: "#fbe102"
 };
 
 export const SPACING = {

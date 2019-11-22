@@ -6,9 +6,9 @@ import {
   BREAKPOINTS
 } from "../styles";
 
-const Card = ({ children, title }) => (
-  <div className="card">
-    <h2 className="card-title">{title}</h2>
+const Card = ({ children, title, dark = false }) => (
+  <div className={`card ${dark && "card--dark"}`}>
+    {title && <h2 className="card-title">{title}</h2>}
     {children}
     <style jsx>
       {`
@@ -24,6 +24,11 @@ const Card = ({ children, title }) => (
           .card {
             padding: ${SPACING.large};
           }
+        }
+
+        .card--dark {
+          background-color: ${COLOURS.darkerGrey};
+          color: ${COLOURS.white};
         }
 
         .card-title {

@@ -1,10 +1,12 @@
 export default () => (
   <style jsx global>
     {`
+      html,
       body {
         padding: 0;
         margin: 0;
         font-family: "Open Sans", sans-serif;
+        height: 100%;
       }
 
       div {
@@ -26,6 +28,10 @@ export default () => (
 
       h2 {
         font-size: 1.8rem;
+      }
+
+      p {
+        margin-top: 0;
       }
     `}
   </style>

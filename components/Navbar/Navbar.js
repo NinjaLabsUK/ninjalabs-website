@@ -8,7 +8,7 @@ export default () => (
   <nav>
     <div className="container">
       <NavLinksContainer>
-        <NavLink title="Blog" href="/blog" />
+        <NavLink title="My CV" href="/cv" />
         <NavLink title="Playground" href="/playground" />
       </NavLinksContainer>
       <NavLogo />

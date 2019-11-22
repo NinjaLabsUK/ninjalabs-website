@@ -18,7 +18,7 @@ export default () => (
     <style jsx>
       {`
         .hero {
-          padding: ${SPACING.medium};
+          padding: ${SPACING.largest} 0;
           background: ${COLOURS.darkGrey};
           background-size: 22px 22px;
         }

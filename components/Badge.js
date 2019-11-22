@@ -6,7 +6,7 @@ const Badge = ({ text }) => (
     <style jsx>{`
       .badge {
         background-color: ${COLOURS.primary};
-        color: ${COLOURS.white};
+
         padding: ${SPACING.smaller} ${SPACING.small};
         border-radius: ${BORDER_RADIUS};
         margin-right: ${SPACING.smaller};
