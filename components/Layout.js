@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import GlobalStyles from "./GlobalStyles";
 import { SPACING, COLOURS } from "../styles";
 import { ICONS } from "../consts";
@@ -37,6 +38,7 @@ const Layout = ({ children }) => (
     </div>
     <Navbar />
     {children}
+    <Footer />
     <div id="modal"></div>
     <GlobalStyles />
   </>

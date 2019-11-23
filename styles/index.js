@@ -26,6 +26,7 @@ export const SPACING = {
 };
 
 export const FONT_SIZE = {
+  smaller: "12px",
   small: "14px",
   medium: "16px",
   large: "24px",

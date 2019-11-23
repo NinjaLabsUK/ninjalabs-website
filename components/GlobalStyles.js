@@ -1,3 +1,5 @@
+import { SPACING, COLOURS, FONT_SIZE } from "../styles";
+
 export default () => (
   <style jsx global>
     {`
@@ -24,14 +26,33 @@ export default () => (
 
       h1 {
         font-size: 2.8rem;
+        margin-bottom: ${SPACING.medium};
       }
 
       h2 {
         font-size: 1.8rem;
+        margin-bottom: ${SPACING.medium};
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: ${SPACING.small};
       }
 
       p {
         margin-top: 0;
+      }
+
+      table {
+        text-align: left;
+        border-collapse: collapse;
+        font-size: ${FONT_SIZE.medium};
+      }
+
+      th,
+      td {
+        border: 1px solid ${COLOURS.lightGrey};
+        padding: ${SPACING.small} ${SPACING.medium};
       }
     `}
   </style>

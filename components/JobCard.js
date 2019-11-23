@@ -26,7 +26,7 @@ const JobCard = ({
       .job-card {
         box-shadow: ${SHADOWS.light};
         width: 280px;
-        height: 250px;
+        height: 260px;
         padding: ${SPACING.medium};
         margin: ${SPACING.medium} ${SPACING.small};
         display: inline-block;

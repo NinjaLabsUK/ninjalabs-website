@@ -30,7 +30,7 @@ const JOBS = [
   },
   {
     companyName: "ADXBA",
-    imgSrc: "/img/adxba-logo.png",
+    imgSrc: "/img/adxba-logo2.png",
     position: "Software Developer",
     description:
       "Started my apprenticeship here in 2014. Here I was able to determine what languages I enjoyed working with and was a huge part in deciding what I wanted to pursue as a developer.",
@@ -168,13 +168,13 @@ const cv = () => {
 
         .cv__jobs {
           margin: ${SPACING.medium} 0;
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
         }
 
         @media (max-width: ${BREAKPOINTS.mobile}) {
           .cv__jobs {
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
             margin-left: -${SPACING.medium};
             margin-right: -${SPACING.medium};
           }
