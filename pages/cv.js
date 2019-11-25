@@ -5,6 +5,7 @@ import Container from "../components/Container";
 import AboutMe from "../components/AboutMe";
 import JobCard from "../components/JobCard";
 import BottomMoal from "../components/BottomModal";
+import Accordion from "../components/Accordion";
 import { COLOURS, SPACING, FONT_SIZE, SHADOWS, BREAKPOINTS } from "../styles";
 
 const JOBS = [
@@ -30,7 +31,7 @@ const JOBS = [
   },
   {
     companyName: "ADXBA",
-    imgSrc: "/img/adxba-logo2.png",
+    imgSrc: "/img/adxba-logo.png",
     position: "Software Developer",
     description:
       "Started my apprenticeship here in 2014. Here I was able to determine what languages I enjoyed working with and was a huge part in deciding what I wanted to pursue as a developer.",
@@ -127,38 +128,47 @@ const cv = () => {
 
         <h2>Education 😴</h2>
 
-        <h3>Level 4 Software Development Apprenticeship 2016 - 2017</h3>
-        <p>
-          IT, Software & Web and Telecoms Professionals Higher Apprenticeship
-        </p>
-        <h3>Level 3 Software Development Apprenticeship 2014 - 2015</h3>
-        <p>
-          IT, Software, Web and Telecoms Professionals Advanced Apprenticeship
-        </p>
-
-        <h3>Aquinas College, Stockport 2012-2014</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>A Levels</th>
-              <th>AS Levels</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Computing B</td>
-              <td>Computing B</td>
-            </tr>
-            <tr>
-              <td>Maths C</td>
-              <td>Maths C</td>
-            </tr>
-            <tr>
-              <td>Physics C</td>
-              <td>Physics C</td>
-            </tr>
-          </tbody>
-        </table>
+        <Accordion
+          items={[
+            {
+              title: "Level 4 Software Development Apprenticeship 2016 - 2017",
+              content:
+                "IT, Software & Web and Telecoms Professionals Higher Apprenticeship"
+            },
+            {
+              title: "Level 3 Software Development Apprenticeship 2014 - 2015",
+              content:
+                "IT, Software, Web and Telecoms Professionals Advanced Apprenticeship"
+            },
+            {
+              title: "Aquinas College, Stockport 2012-2014",
+              content: () => (
+                <table style={{ width: "100%", maxWidth: "400px" }}>
+                  <thead>
+                    <tr>
+                      <th>A Levels</th>
+                      <th>AS Levels</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Computing B</td>
+                      <td>Computing B</td>
+                    </tr>
+                    <tr>
+                      <td>Maths C</td>
+                      <td>Maths C</td>
+                    </tr>
+                    <tr>
+                      <td>Physics C</td>
+                      <td>Physics C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              )
+            }
+          ]}
+        />
       </Container>
 
       <style jsx>{`

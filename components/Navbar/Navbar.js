@@ -21,7 +21,7 @@ export default () => (
           <FaTwitter size="1.6em" />
         </a>
         <a
-          href="https://github.com/NinjaLabsUK"
+          href="https://github.com/KChadwick96"
           className="icon"
           target="_blank"
         >
