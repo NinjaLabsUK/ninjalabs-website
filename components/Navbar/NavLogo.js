@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTAINER_WIDTH } from "../../styles";
+
 export default () => (
   <div className="container">
     <Link href="/">
@@ -9,9 +9,10 @@ export default () => (
       {`
         .container {
           position: absolute;
+          min-width: 400px;
+          left: 0;
+          right: 0;
           text-align: center;
-          width: 100%;
-          max-width: ${CONTAINER_WIDTH};
         }
 
         @media only screen and (max-width: 480px) {

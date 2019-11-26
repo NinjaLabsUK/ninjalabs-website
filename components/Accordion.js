@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 import {
   SPACING,
@@ -13,22 +13,21 @@ import {
 const Accordion = ({ items = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  const handleClick = index => {
+    setSelectedIndex(index === selectedIndex ? null : index);
+  };
+
   return (
     <div className="accordion">
       {items.map(({ title, content }, index) => (
-        <>
+        <div key={`accordion-item-${index}`}>
           <button
-            key={`accordion-button-${index}`}
-            className={`accordion__button ${
-              selectedIndex === index ? "accordion__button--active" : ""
-            }`}
-            onClick={() => setSelectedIndex(index)}
+            className="accordion__button"
+            onClick={() => handleClick(index)}
           >
-            {selectedIndex === index ? (
-              <FaChevronUp style={{ marginRight: SPACING.medium }} />
-            ) : (
-              <FaChevronDown style={{ marginRight: SPACING.medium }} />
-            )}
+            <div className="accordion__icon-container">
+              {selectedIndex === index ? <FaChevronDown /> : <FaChevronRight />}
+            </div>
             {title}
           </button>
           <div
@@ -38,7 +37,7 @@ const Accordion = ({ items = [] }) => {
           >
             {typeof content === "function" ? content() : content}
           </div>
-        </>
+        </div>
       ))}
 
       <style jsx>{`
@@ -49,46 +48,31 @@ const Accordion = ({ items = [] }) => {
         }
 
         .accordion__button {
-          display: block;
+          display: flex;
+          align-items: center;
           text-align: left;
           border: none;
           width: 100%;
-          background-color: ${COLOURS.lightGrey};
+          background-color: ${COLOURS.white};
           font-size: ${FONT_SIZE.medium};
           padding: ${SPACING.medium};
           cursor: pointer;
         }
 
-        .accordion__button-icon {
+        .accordion__icon-container {
+          flex-grow: 0;
+          flex-shrink: 0;
           margin-right: ${SPACING.medium};
         }
 
-        .accordion__button--active {
-          background-color: ${COLOURS.white};
-        }
-
         .accordion__content {
-          flex-grow: 1;
           width: 100%;
-          padding: 0;
-          height: 0;
-          visibility: hidden;
+          padding: ${SPACING.medium};
+          display: none;
         }
 
         .accordion__content--active {
-          height: auto;
-          visibility: visible;
-          padding: ${SPACING.medium};
-        }
-
-        @media (max-width: ${BREAKPOINTS.mobile}) {
-          .accordion {
-            flex-direction: column;
-          }
-
-          .accordion__button-container {
-            flex-basis: auto;
-          }
+          display: block;
         }
       `}</style>
     </div>

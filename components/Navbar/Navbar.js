@@ -4,6 +4,17 @@ import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
 import { COLOURS, SHADOWS, SPACING, CONTAINER_WIDTH } from "../../styles";
 
+const LINKS = [
+  {
+    href: "https://twitter.com/NinjaLabsUK",
+    icon: <FaTwitter size="1.6em" />
+  },
+  {
+    href: "https://github.com/KChadwick96",
+    icon: <FaGithub size="1.6em" />
+  }
+];
+
 export default () => (
   <nav>
     <div className="container">
@@ -13,20 +24,11 @@ export default () => (
       </NavLinksContainer>
       <NavLogo />
       <NavLinksContainer>
-        <a
-          href="https://twitter.com/NinjaLabsUK"
-          className="icon"
-          target="_blank"
-        >
-          <FaTwitter size="1.6em" />
-        </a>
-        <a
-          href="https://github.com/KChadwick96"
-          className="icon"
-          target="_blank"
-        >
-          <FaGithub size="1.6em" />
-        </a>
+        {LINKS.map(({ href, icon: Icon }, index) => (
+          <a key={`link-${index}`} href={href} className="icon" target="_blank">
+            {Icon}
+          </a>
+        ))}
       </NavLinksContainer>
     </div>
     <style jsx>{`
@@ -43,6 +45,7 @@ export default () => (
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
       }
 
       .icon {
