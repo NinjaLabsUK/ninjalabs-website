@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
-import {
-  SPACING,
-  COLOURS,
-  FONT_SIZE,
-  BORDER_RADIUS,
-  SHADOWS,
-  BREAKPOINTS
-} from "../styles";
+import { SPACING, COLOURS, FONT_SIZE, BORDER_RADIUS, SHADOWS } from "../styles";
 
 const Accordion = ({ items = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);

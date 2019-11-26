@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default () => (
+const NavLogo = () => (
   <div className="container">
     <Link href="/">
       <img className="image" src="/logo.svg" />
@@ -32,3 +32,5 @@ export default () => (
     </style>
   </div>
 );
+
+export default NavLogo;

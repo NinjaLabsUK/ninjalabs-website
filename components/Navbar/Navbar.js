@@ -1,4 +1,5 @@
 import { FaGithub, FaTwitter } from "react-icons/fa";
+
 import NavLinksContainer from "./NavLinksContainer";
 import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
@@ -15,7 +16,7 @@ const LINKS = [
   }
 ];
 
-export default () => (
+const Navbar = () => (
   <nav>
     <div className="container">
       <NavLinksContainer>
@@ -59,3 +60,5 @@ export default () => (
     `}</style>
   </nav>
 );
+
+export default Navbar;
