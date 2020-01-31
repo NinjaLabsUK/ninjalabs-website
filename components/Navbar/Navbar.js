@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
 import { COLOURS, SHADOWS, SPACING, CONTAINER_WIDTH } from "../../styles";
 
-const LINKS = [
+const SOCIAL_LINKS = [
   {
     href: "https://twitter.com/NinjaLabsUK",
     icon: <FaTwitter size="1.6em" />
@@ -16,16 +16,28 @@ const LINKS = [
   }
 ];
 
+const LINKS = [
+  {
+    title: "My CV",
+    href: "/cv"
+  },
+  {
+    title: "rFactor 2",
+    href: "https://rf2.ninja-labs.co.uk"
+  }
+];
+
 const Navbar = () => (
   <nav>
     <div className="container">
       <NavLinksContainer>
-        <NavLink title="My CV" href="/cv" />
-        <NavLink title="Playground" href="/playground" />
+        {LINKS.map(props => (
+          <NavLink {...props} />
+        ))}
       </NavLinksContainer>
       <NavLogo />
       <NavLinksContainer>
-        {LINKS.map(({ href, icon: Icon }, index) => (
+        {SOCIAL_LINKS.map(({ href, icon: Icon }, index) => (
           <a key={`link-${index}`} href={href} className="icon" target="_blank">
             {Icon}
           </a>
