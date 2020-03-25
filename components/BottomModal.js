@@ -36,7 +36,7 @@ const BottomModal = ({ title, active = false, onClose, children }) => {
 
   return (
     <Portal>
-      <div className={`bottom-modal ${active ? "bottom-modal--active" : ""}`}>
+      <div className="bottom-modal">
         <div className="bottom-modal__content" ref={contentRef}>
           <Container>
             {title && <h2 className="bottom-modal__title">{title}</h2>}
@@ -63,7 +63,7 @@ const BottomModal = ({ title, active = false, onClose, children }) => {
             background-color: ${COLOURS.darkerGrey};
             bottom: 0;
             position: absolute;
-            width: 100%;
+            max-width: 100%;
             color: ${COLOURS.white};
             animation-name: fade-in;
             animation-duration: 0.8s;
