@@ -46,8 +46,7 @@ const Navbar = () => (
     </div>
     <style jsx>{`
       nav {
-        background-color: ${COLOURS.white};
-        box-shadow: ${SHADOWS.light};
+        background-color: ${COLOURS.darkerGrey};
       }
 
       .container {
@@ -63,7 +62,7 @@ const Navbar = () => (
 
       .icon {
         margin-left: ${SPACING.small};
-        color: ${COLOURS.black};
+        color: ${COLOURS.white};
       }
 
       .icon:hover {

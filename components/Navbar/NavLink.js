@@ -11,17 +11,13 @@ export default ({ title, href }) => (
       .link {
         padding: ${SPACING.smaller};
         text-decoration: none;
-        color: ${COLOURS.darkGrey};
+        color: ${COLOURS.white};
         margin-right: ${SPACING.small};
       }
 
-      .link:hover {
-        color: ${COLOURS.black};
-      }
-
+      .link:hover,
       .active {
         color: ${COLOURS.primary};
-        font-weight: bold;
       }
     `}</style>
   </Fragment>
