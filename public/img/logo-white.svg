@@ -42,30 +42,35 @@
 		attributeName="fill-opacity"
 		from="0"
 		to="1" 
-		dur="0.5s"
+		dur="1.5s"
 		id="bub1Anim"
-		begin="0s;bub3Anim.end"
 		fill="freeze"
+		values="0;1;1"
+    	keyTimes="0;0.9;1"
+		repeatCount="indefinite"
 	/>
 	<animate
 		xlink:href="#bubble-2"
 		attributeName="fill-opacity"
 		from="0"
 		to="1" 
-		dur="0.5s"
+		dur="1.5s"
 		id="bub2Anim"
-		begin="bub1Anim.end"
 		fill="freeze"
-		
+		values="0;0;1;1"
+    	keyTimes="0;0.3;0.9;1"
+		repeatCount="indefinite"
 	/>
 	<animate
 		xlink:href="#bubble-3"
 		attributeName="fill-opacity"
 		from="0"
 		to="1" 
-		dur="0.5s"
+		dur="1.5s"
 		id="bub3Anim"
-		begin="bub2Anim.end"
 		fill="freeze"
+		values="0;0;1;1"
+    	keyTimes="0;0.6;0.9;1;"
+		repeatCount="indefinite"
 	/>
 </svg>
