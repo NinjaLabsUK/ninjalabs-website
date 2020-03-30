@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 6000 2496" style="enable-background:new 0 0 6000 2496;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 6000 2496">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 	.st1{fill:#FFFFFF;}
@@ -32,9 +32,40 @@
 	c-31.5,0-51.3-16.2-51.3-61.2v-45h-93.6v38.7c0,100.8,50.4,158.4,147.6,158.4s147.6-57.6,147.6-158.4c0-72-26.1-124.2-108.9-197.1
 	c-64.8-56.7-84.6-90.9-84.6-136.8c0-45,18-62.1,49.5-62.1s49.5,17.1,49.5,62.1v26.1h93.6v-19.8c0-100.8-49.5-158.4-145.8-158.4
 	S5001.9,1002.3,5001.9,1103.1z"/>
-<path class="st0" d="M4050,797c21,0,38,17,38,38c0,21-17,38-38,38c-21,0-38-17-38-38C4012,814,4029,797,4050,797z"/>
-<path class="st0" d="M3992,673c17.7,0,32,14.3,32,32c0,17.7-14.3,32-32,32c-17.7,0-32-14.3-32-32C3960,687.3,3974.3,673,3992,673z"
+	
+	<circle id="bubble-1" fill="white" cx="4050" cy="845" r="45" style="fill-opacity: 0;" />
+	<circle id="bubble-2" fill="white" cx="3992" cy="710" r="35" style="fill-opacity: 0;" />
+	<circle id="bubble-3" fill="white" cx="4050" cy="580" r="30" style="fill-opacity: 0;" />
+	
+	<animate
+		xlink:href="#bubble-1"
+		attributeName="fill-opacity"
+		from="0"
+		to="1" 
+		dur="0.5s"
+		id="bub1Anim"
+		begin="0s;bub3Anim.end"
+		fill="freeze"
 	/>
-<path class="st0" d="M4050,559c14.9,0,27,12.1,27,27c0,14.9-12.1,27-27,27c-14.9,0-27-12.1-27-27C4023,571.1,4035.1,559,4050,559z"
+	<animate
+		xlink:href="#bubble-2"
+		attributeName="fill-opacity"
+		from="0"
+		to="1" 
+		dur="0.5s"
+		id="bub2Anim"
+		begin="bub1Anim.end"
+		fill="freeze"
+		
+	/>
+	<animate
+		xlink:href="#bubble-3"
+		attributeName="fill-opacity"
+		from="0"
+		to="1" 
+		dur="0.5s"
+		id="bub3Anim"
+		begin="bub2Anim.end"
+		fill="freeze"
 	/>
 </svg>
