@@ -26,12 +26,12 @@ export const SPACING = {
 };
 
 export const FONT_SIZE = {
-  smaller: "12px",
-  small: "14px",
+  smaller: "14px",
+  small: "16px",
   medium: "16px",
-  large: "24px",
-  larger: "32px",
-  largest: "42px"
+  large: "20px",
+  larger: "24px",
+  largest: "38px"
 };
 
 export const SHADOWS = {

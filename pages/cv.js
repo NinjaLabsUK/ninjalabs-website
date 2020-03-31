@@ -82,14 +82,12 @@ const Heading = () => (
 
         .heading__title {
           margin-bottom: 0;
-          font-size: ${FONT_SIZE.larger};
-          text-transform: uppercase;
+          font-size: ${FONT_SIZE.largest};
         }
 
         .heading__subtitle {
           margin: 0;
-          font-size: ${FONT_SIZE.medium};
-          text-transform: uppercase;
+          font-size: ${FONT_SIZE.large};
         }
       `}
     </style>

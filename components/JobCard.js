@@ -26,7 +26,7 @@ const JobCard = ({
       .job-card {
         box-shadow: ${SHADOWS.light};
         width: 280px;
-        height: 260px;
+        height: 290px;
         padding: ${SPACING.medium};
         margin: ${SPACING.medium} ${SPACING.small};
         display: inline-block;
@@ -47,7 +47,7 @@ const JobCard = ({
       }
 
       .job-card__subtitle {
-        font-size: ${FONT_SIZE.medium};
+        font-size: ${FONT_SIZE.small};
       }
 
       .job-card__description {

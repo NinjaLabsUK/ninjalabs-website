@@ -22,6 +22,8 @@ export default () => (
       h5,
       h6 {
         margin-top: 0;
+        font-family: "Bebas Neueu", sans-serif;
+        letter-spacing: -1px;
       }
 
       h1 {
@@ -30,7 +32,7 @@ export default () => (
       }
 
       h2 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         margin-bottom: ${SPACING.medium};
       }
 

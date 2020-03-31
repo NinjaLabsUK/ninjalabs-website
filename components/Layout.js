@@ -15,6 +15,10 @@ const Layout = ({ children }) => (
         href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        rel="stylesheet"
+      />
       {ICONS.map((attributes, key) => (
         <link key={`icon-${key}`} {...attributes} />
       ))}
