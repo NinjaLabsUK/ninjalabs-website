@@ -43,7 +43,7 @@ export default () => (
         <div className="project__thumbnail">
           <img src="rf2.jpeg" className="project__img" />
         </div>
-        <div style={{ padding: SPACING.larger }}>
+        <div className="project__description">
           <h2 style={{ color: COLOURS.primary, fontWeight: "bold" }}>
             Sim Racing Overlay
           </h2>
@@ -91,8 +91,20 @@ export default () => (
         border-radius: ${BORDER_RADIUS};
       }
 
+      .project__description {
+        padding: ${SPACING.larger};
+      }
+
       @media (max-width: ${BREAKPOINTS.tablet}) {
-        flex-flow: column-reverse;
+        flex-direction: column-reverse;
+
+        .project__thumbnail {
+          flex: 1;
+        }
+
+        .project__description {
+          padding: ${SPACING.larger} 0;
+        }
       }
     `}</style>
   </Layout>

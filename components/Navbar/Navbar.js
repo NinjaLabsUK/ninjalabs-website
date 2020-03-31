@@ -53,7 +53,7 @@ const Navbar = () => (
         height: 75px;
         max-width: ${CONTAINER_WIDTH};
         margin: 0 auto;
-        padding: 0 ${SPACING.small};
+        padding: 0 ${SPACING.medium};
         display: flex;
         justify-content: space-between;
         align-items: center;

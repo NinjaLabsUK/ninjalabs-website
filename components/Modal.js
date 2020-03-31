@@ -46,12 +46,10 @@ const Modal = ({ children, onClose }) => {
             max-width: 500px;
             left: 0;
             right: 0;
-            margin: 200px auto;
+            margin: 150px auto;
             padding: ${SPACING.larger};
             color: ${COLOURS.white};
             border-radius: ${BORDER_RADIUS};
-            animation-name: fade-in;
-            animation-duration: 0.8s;
           }
         `}
       </style>
