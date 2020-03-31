@@ -31,8 +31,8 @@ const Navbar = () => (
   <nav>
     <div className="container">
       <NavLinksContainer>
-        {LINKS.map(props => (
-          <NavLink {...props} />
+        {LINKS.map((props, index) => (
+          <NavLink key={`link-${index}`} {...props} />
         ))}
       </NavLinksContainer>
       <NavLogo />
