@@ -4,7 +4,13 @@ import { FaChevronRight } from "react-icons/fa";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import Button from "../components/Button";
-import { COLOURS, FONT_SIZE, SPACING, BORDER_RADIUS } from "../styles";
+import {
+  COLOURS,
+  FONT_SIZE,
+  SPACING,
+  BORDER_RADIUS,
+  BREAKPOINTS
+} from "../styles";
 
 const Section = ({ children }) => (
   <div style={{ backgroundColor: COLOURS.darkerGrey }}>
@@ -12,15 +18,30 @@ const Section = ({ children }) => (
   </div>
 );
 
+const ProjectLink = ({ text, href }) => {
+  return (
+    <a
+      href={href}
+      style={{
+        color: COLOURS.primary,
+        fontSize: FONT_SIZE.large,
+        fontWeight: "bold",
+        textDecoration: "none"
+      }}
+      target="_blank"
+    >
+      {text}
+      <FaChevronRight size="14px" style={{ marginLeft: SPACING.small }} />
+    </a>
+  );
+};
+
 export default () => (
   <Layout>
     <Section>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div>
-          <img
-            src="rf2.jpeg"
-            style={{ maxWidth: "450px", borderRadius: BORDER_RADIUS }}
-          />
+      <div className="project">
+        <div className="project__thumbnail">
+          <img src="rf2.jpeg" className="project__img" />
         </div>
         <div style={{ padding: SPACING.larger }}>
           <h2 style={{ color: COLOURS.primary, fontWeight: "bold" }}>
@@ -30,19 +51,11 @@ export default () => (
             Broadcasting overlay built in React. Integrates with OBS to provide
             viewers with a real-time race overview.
           </p>
-          <a
+
+          <ProjectLink
+            text="View Project"
             href="https://rf2.ninja-labs.co.uk"
-            style={{
-              color: COLOURS.primary,
-              fontSize: FONT_SIZE.medium,
-              fontWeight: "bold",
-              textDecoration: "none"
-            }}
-            target="_blank"
-          >
-            View Project
-            <FaChevronRight size="14px" style={{ marginLeft: "4px" }} />
-          </a>
+          />
         </div>
       </div>
       <div style={{ textAlign: "center" }}>
@@ -51,15 +64,36 @@ export default () => (
           src="/img/logo-white.svg"
           style={{ maxWidth: "450px", margin: `${SPACING.larger} 0` }}
         />
+        <div>
+          <Link href="/cv">
+            <Button text="Look at this cool button, it'll take you to my cv" />
+          </Link>
+        </div>
       </div>
     </Section>
 
     <Container>
-      <div style={{ marginBottom: "600px" }}>
-        <Link href="/cv">
-          <Button text="Look at this cool button, it'll take you to my cv" />
-        </Link>
-      </div>
+      <div style={{ marginBottom: "600px" }}></div>
     </Container>
+
+    <style jsx>{`
+      .project {
+        display: flex;
+        align-items: center;
+      }
+
+      .project__thumbnail {
+        flex: 0 0 430px;
+      }
+
+      .project__img {
+        max-width: 100%;
+        border-radius: ${BORDER_RADIUS};
+      }
+
+      @media (max-width: ${BREAKPOINTS.tablet}) {
+        flex-flow: column-reverse;
+      }
+    `}</style>
   </Layout>
 );
