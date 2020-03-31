@@ -27,17 +27,17 @@ export default () => (
       }
 
       h1 {
-        font-size: 2.8rem;
+        font-size: ${FONT_SIZE.largest};
         margin-bottom: ${SPACING.medium};
       }
 
       h2 {
-        font-size: 2.2rem;
+        font-size: ${FONT_SIZE.larger};
         margin-bottom: ${SPACING.medium};
       }
 
       h3 {
-        font-size: 1.2rem;
+        font-size: ${FONT_SIZE.large};
         margin-bottom: ${SPACING.small};
       }
 

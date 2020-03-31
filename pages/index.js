@@ -44,9 +44,7 @@ export default () => (
           <img src="rf2.jpeg" className="project__img" />
         </div>
         <div className="project__description">
-          <h2 style={{ color: COLOURS.primary, fontWeight: "bold" }}>
-            Sim Racing Overlay
-          </h2>
+          <h2 className="project__title">Sim Racing Overlay</h2>
           <p style={{ color: COLOURS.white, fontSize: FONT_SIZE.large }}>
             Broadcasting overlay built in React. Integrates with OBS to provide
             viewers with a real-time race overview.
@@ -93,6 +91,11 @@ export default () => (
 
       .project__description {
         padding: ${SPACING.larger};
+      }
+
+      .project__title {
+        color: ${COLOURS.primary};
+        font-weight: bold;
       }
 
       @media (max-width: ${BREAKPOINTS.tablet}) {

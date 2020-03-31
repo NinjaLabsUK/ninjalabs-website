@@ -30,7 +30,7 @@ export const FONT_SIZE = {
   small: "16px",
   medium: "16px",
   large: "20px",
-  larger: "24px",
+  larger: "30px",
   largest: "38px"
 };
 

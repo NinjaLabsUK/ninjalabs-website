@@ -48,6 +48,7 @@ const Accordion = ({ items = [] }) => {
           width: 100%;
           background-color: ${COLOURS.white};
           font-size: ${FONT_SIZE.medium};
+          font-weight: bold;
           padding: ${SPACING.medium};
           cursor: pointer;
         }

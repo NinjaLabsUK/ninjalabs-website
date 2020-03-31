@@ -82,7 +82,6 @@ const Heading = () => (
 
         .heading__title {
           margin-bottom: 0;
-          font-size: ${FONT_SIZE.largest};
         }
 
         .heading__subtitle {
