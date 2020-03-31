@@ -6,7 +6,7 @@ const Footer = () => (
     <Container>
       <img src="/img/logo-white-small.png" className="footer__logo" />
       <p>Some footer content here</p>
-      <p className="footer__copyright">© 2020 Keiran</p>
+      <p className="footer__copyright">© 2020 Kieran</p>
     </Container>
     <style jsx>{`
       .footer {
