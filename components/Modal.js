@@ -21,8 +21,7 @@ const Modal = ({ children, onClose }) => {
     <Portal>
       <div className="modal">
         <div className="modal__content">
-          {children}
-
+          <div className="modal__text">{children}</div>
           <Button text="Ok" onClick={onClose} />
         </div>
       </div>
@@ -44,12 +43,18 @@ const Modal = ({ children, onClose }) => {
             background-color: ${COLOURS.darkerGrey};
             position: absolute;
             max-width: 500px;
-            left: 0;
-            right: 0;
+            left: ${SPACING.medium};
+            right: ${SPACING.medium};
             margin: 150px auto;
             padding: ${SPACING.larger};
             color: ${COLOURS.white};
             border-radius: ${BORDER_RADIUS};
+          }
+
+          .modal__text {
+            margin-bottom: ${SPACING.medium};
+            max-height: 350px;
+            overflow-y: auto;
           }
         `}
       </style>
