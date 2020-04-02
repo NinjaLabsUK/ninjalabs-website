@@ -20,10 +20,6 @@ const LINKS = [
   {
     title: "My CV",
     href: "/cv"
-  },
-  {
-    title: "rFactor 2",
-    href: "https://rf2.ninja-labs.co.uk"
   }
 ];
 

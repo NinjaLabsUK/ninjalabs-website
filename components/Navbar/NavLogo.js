@@ -9,13 +9,13 @@ const NavLogo = () => (
       {`
         .container {
           position: absolute;
-          min-width: 400px;
+          min-width: 300px;
           left: 0;
           right: 0;
           text-align: center;
         }
 
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 300px) {
           .container {
             display: none;
           }

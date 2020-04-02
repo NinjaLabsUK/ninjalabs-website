@@ -9,6 +9,7 @@ export default () => (
         margin: 0;
         font-family: "Open Sans", sans-serif;
         height: 100%;
+        overflow-x: hidden;
       }
 
       div {

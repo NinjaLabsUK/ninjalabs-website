@@ -20,12 +20,15 @@ const Button = ({ text, onClick = () => null, variant = "default" }) => (
       }
 
       .button--default:hover {
-        text-decoration: underline;
+        background-color: ${COLOURS.primaryDark};
       }
 
       .button--link {
         padding: 0;
         color: ${COLOURS.blue};
+      }
+
+      .button--link:hover {
         text-decoration: underline;
       }
     `}</style>

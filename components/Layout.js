@@ -3,7 +3,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import GlobalStyles from "./GlobalStyles";
-import { SPACING, COLOURS } from "../styles";
+import { COLOURS } from "../styles";
 import { ICONS } from "../consts";
 
 const Layout = ({ children }) => (
@@ -30,16 +30,6 @@ const Layout = ({ children }) => (
       />
       <meta name="theme-color" content={COLOURS.darkerGrey} />
     </Head>
-    <div
-      style={{
-        width: "100%",
-        background: COLOURS.primary,
-        padding: SPACING.small,
-        textAlign: "center"
-      }}
-    >
-      Under construction!
-    </div>
     <Navbar />
     {children}
     <Footer />

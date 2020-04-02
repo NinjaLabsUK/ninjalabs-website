@@ -10,9 +10,10 @@ export const COLOURS = {
   darkerGrey: "#141414",
   darkGrey: "#212121",
   grey: "#8e8e8e",
-  blue: "#1d25f5",
+  blue: "#1d57f5",
   lightGrey: "#e8e8e8",
   primary: "#fbe102",
+  primaryDark: "#ebd202",
   overlay: "rgba(0, 0, 0, 0.75)"
 };
 
@@ -27,7 +28,7 @@ export const SPACING = {
 
 export const FONT_SIZE = {
   smaller: "14px",
-  small: "16px",
+  small: "14px",
   medium: "16px",
   large: "20px",
   larger: "30px",
@@ -39,6 +40,6 @@ export const SHADOWS = {
   medium: "0 5px 10px rgba(0,0,0,0.4)"
 };
 
-export const BORDER_RADIUS = "4px";
+export const BORDER_RADIUS = "3px";
 
 export const CONTAINER_WIDTH = "1024px";

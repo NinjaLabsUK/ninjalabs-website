@@ -28,10 +28,10 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
       animate={{ y: 0, x: -150, opacity: 1 }}
       transition={{
         ...DEFAULT_SPRING,
-        delay: 2,
+        delay: 1,
         x: {
           ...DEFAULT_SPRING,
-          delay: 4
+          delay: 3
         }
       }}
       style={{ width: INITIAL_WIDTH }}
@@ -66,10 +66,10 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         }}
         transition={{
           ...DEFAULT_SPRING,
-          delay: 4,
+          delay: 3,
           backgroundColor: {
             ...DEFAULT_SPRING,
-            delay: 4
+            delay: 3
           }
         }}
       >
@@ -91,7 +91,7 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
       }
       
       .fastest-lap__container {
-        box-shadow: ${SHADOWS.medium};
+        box-shadow: ${SHADOWS.light};
         position: absolute;
         z-index: 10;
         font-weight: bold;
@@ -100,10 +100,11 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         display: flex;
         align-items: center;
         justify-content: center;
+
       }
 
       .fastest-lap__details {
-        box-shadow: ${SHADOWS.medium};
+        box-shadow: ${SHADOWS.light};
         position: absolute;
         top: 0;
         height: 100%;
