@@ -35,7 +35,8 @@ export const FONT_SIZE = {
 };
 
 export const SHADOWS = {
-  light: "0 5px 10px rgba(0,0,0,0.12)"
+  light: "0 5px 10px rgba(0,0,0,0.12)",
+  medium: "0 5px 10px rgba(0,0,0,0.4)"
 };
 
 export const BORDER_RADIUS = "4px";

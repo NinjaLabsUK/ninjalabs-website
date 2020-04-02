@@ -24,13 +24,14 @@ const DEFAULT_SPRING = {
 const FastestLap = ({ firstName, lastName, lapTime }) => (
   <>
     <motion.div
-      initial={{ y: -100 }}
-      animate={{ y: 50, x: -150 }}
+      initial={{ y: -150, opacity: 0 }}
+      animate={{ y: 0, x: -150, opacity: 1 }}
       transition={{
         ...DEFAULT_SPRING,
+        delay: 2,
         x: {
           ...DEFAULT_SPRING,
-          delay: 2
+          delay: 4
         }
       }}
       style={{ width: INITIAL_WIDTH }}
@@ -65,10 +66,10 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         }}
         transition={{
           ...DEFAULT_SPRING,
-          delay: 2,
+          delay: 4,
           backgroundColor: {
             ...DEFAULT_SPRING,
-            delay: 2
+            delay: 4
           }
         }}
       >
@@ -84,13 +85,13 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
       .fastest-lap {
         color: ${COLOURS.white};
         height: 80px;
-        box-shadow: ${SHADOWS.light};
         font-size: ${FONT_SIZE.large};
         position: relative;
         margin: 0 auto;
       }
-
+      
       .fastest-lap__container {
+        box-shadow: ${SHADOWS.medium};
         position: absolute;
         z-index: 10;
         font-weight: bold;
@@ -102,6 +103,7 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
       }
 
       .fastest-lap__details {
+        box-shadow: ${SHADOWS.medium};
         position: absolute;
         top: 0;
         height: 100%;

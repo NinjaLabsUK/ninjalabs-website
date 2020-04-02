@@ -58,20 +58,31 @@ export default () => (
             />
           </div>
         </div>
-        <div className="project__extra">
-          <FastestLap
-            firstName="Kieran"
-            lastName="Chadwick"
-            lapTime="1:23.432"
-          />
-        </div>
       </div>
+    </Section>
 
+    <div style={{ margin: "80px 0" }}>
+      <h2
+        style={{
+          marginBottom: "50px",
+          textAlign: "center",
+          fontSize: FONT_SIZE.largest
+        }}
+      >
+        Built with Framer Motion
+      </h2>
+
+      <div className="project__extra">
+        <FastestLap firstName="Kieran" lastName="Chadwick" lapTime="1:23.432" />
+      </div>
+    </div>
+
+    <Section>
       <div style={{ textAlign: "center" }}>
         <img
           className="image"
           src="/img/logo-white.svg"
-          style={{ maxWidth: "450px", margin: `${SPACING.larger} 0` }}
+          style={{ maxWidth: "450px", marginBottom: SPACING.larger }}
         />
         <div>
           <Link href="/cv">
@@ -80,10 +91,6 @@ export default () => (
         </div>
       </div>
     </Section>
-
-    <Container>
-      <div style={{ marginBottom: "600px" }}></div>
-    </Container>
 
     <style jsx>{`
       .project {
