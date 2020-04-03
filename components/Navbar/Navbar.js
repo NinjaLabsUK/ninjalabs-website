@@ -3,7 +3,7 @@ import { FaGithub, FaTwitter } from "react-icons/fa";
 import NavLinksContainer from "./NavLinksContainer";
 import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
-import { COLOURS, SHADOWS, SPACING, CONTAINER_WIDTH } from "../../styles";
+import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
 
 const SOCIAL_LINKS = [
   {

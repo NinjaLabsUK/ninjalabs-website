@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { COLOURS, FONT_SIZE, SPACING, SHADOWS } from "../styles";
+import { COLOURS, FONT_SIZE, SPACING, SHADOWS } from "../../../styles";
 
 const STYLE_VARS = {
   colorWhite: "#ffffff",
