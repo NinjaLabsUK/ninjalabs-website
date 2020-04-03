@@ -5,7 +5,8 @@ import {
   FONT_SIZE,
   SPACING,
   BORDER_RADIUS,
-  BREAKPOINTS
+  BREAKPOINTS,
+  SHADOWS
 } from "../../../styles";
 
 const ProjectLink = ({ text, href }) => (
@@ -29,7 +30,7 @@ const Project = () => {
     <div className="project">
       <div className="project__main">
         <div className="project__thumbnail">
-          <img src="rf2.jpeg" className="project__img" />
+          <img src="img/rf2.png" className="project__img" />
         </div>
         <div className="project__description">
           <h2 className="project__title">Sim Racing Overlay</h2>
@@ -61,6 +62,7 @@ const Project = () => {
         .project__img {
           max-width: 100%;
           border-radius: ${BORDER_RADIUS};
+          box-shadow: ${SHADOWS.medium};
         }
 
         .project__description {
