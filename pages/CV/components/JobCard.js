@@ -1,5 +1,5 @@
-import Button from "./Button";
-import { SPACING, SHADOWS, FONT_SIZE } from "../styles";
+import Button from "../../../components/Button";
+import { SPACING, SHADOWS, FONT_SIZE } from "../../../styles";
 
 const JobCard = ({
   companyName,
