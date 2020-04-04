@@ -32,7 +32,7 @@ export const FONT_SIZE = {
   medium: "16px",
   large: "20px",
   larger: "30px",
-  largest: "38px"
+  largest: "42px"
 };
 
 export const SHADOWS = {

@@ -14,42 +14,6 @@ import {
   BREAKPOINTS
 } from "../../styles";
 
-const JOBS = [
-  {
-    companyName: "Booking.com",
-    imgSrc: "/img/booking-logo.png",
-    position: "Frontend Software Engineer",
-    description:
-      " Doing some stuff here and there. Working on the Taxi dispatch team managing the development Booking.com Taxi Partner Portal",
-    colour: "#113480",
-    longDescription: `At Booking.com I work on the Taxi Dispatch team where my main focus is on the Taxi Partner Portal. I work on the React frontend and the Node API that interacts with our backend services.
-
-      I collaborate closely with product, UX and our backend engineers to go from design to live  providing feedback and making adjustments along the way to get something in the hands of users that we can then iterate on. During my time, I’ve helped graduates get up to speed no matter their React/Node skill level and start contributing to the project at a decent level.
-      
-      I also built a shared node metrics library that was used on multiple projects within the Taxi division to help make adding monitoring to different node projects simpler and more consistent. This included writing the library, adding Sonarqube and deploying the build to our internal npm repository.`
-  },
-  {
-    companyName: "The Robert Street Hub",
-    imgSrc: "/img/rsh-logo.png",
-    position: "Software Developer",
-    description:
-      "Working on fashion site ISAWITFIRST as part of a small team. Working in a high pressure environment getting features finished and tested.",
-    colour: "#fbdd02",
-    longDescription:
-      "At the The Robert Street Hub (team 4 - 5 developers), I worked on our e-commerce fashion site alongside other internal applications. Our main site is written in Liquid (Shopify templating language), Javascript, SCSS and NodeJS."
-  },
-  {
-    companyName: "ADXBA",
-    imgSrc: "/img/adxba-logo.png",
-    position: "Software Developer",
-    description:
-      "Started my apprenticeship here in 2014. Here I was able to determine what languages I enjoyed working with and was a huge part in deciding what I wanted to pursue as a developer.",
-    colour: "#6c4b71",
-    longDescription:
-      "My main responsibility was the development of various parts of our in-house system for monitoring PC’s around the UK  (advertising displays at airports & shopping centres, car park signs etc.). I looked after the development of the mobile app, website and the majority of the API."
-  }
-];
-
 const Heading = () => (
   <>
     <div className="heading">
@@ -99,7 +63,7 @@ const Heading = () => (
   </>
 );
 
-const cv = () => {
+const cv = ({ jobs }) => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
@@ -107,14 +71,14 @@ const cv = () => {
       {selectedJob && (
         <Modal onClose={() => setSelectedJob(null)}>
           <img
-            src={selectedJob.imgSrc}
+            src={selectedJob.data.logo}
             style={{
               maxWidth: "180px",
               maxHeight: "70px",
               marginBottom: SPACING.medium
             }}
           />
-          <div>{selectedJob.longDescription}</div>
+          <div>{selectedJob.body}</div>
         </Modal>
       )}
 
@@ -123,10 +87,13 @@ const cv = () => {
       <Container>
         <AboutMe />
         <div className="cv__jobs">
-          {JOBS.map((job, index) => (
+          {jobs.map((job, index) => (
             <JobCard
               key={`job-${index}`}
-              {...job}
+              companyName={job.data.company}
+              position={job.data.position}
+              description={job.data.description}
+              colour={`#${job.data.colour}`}
               onMoreClick={() => setSelectedJob(job)}
             />
           ))}

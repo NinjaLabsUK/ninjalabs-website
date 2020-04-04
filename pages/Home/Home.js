@@ -89,6 +89,7 @@ const Home = () => {
 
         .project__replay {
           cursor: pointer;
+          color: ${COLOURS.darkGrey};
         }
 
         @media (max-width: ${BREAKPOINTS.tablet}) {
