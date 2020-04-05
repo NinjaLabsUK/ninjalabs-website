@@ -63,7 +63,7 @@ const Heading = () => (
   </>
 );
 
-const cv = ({ jobs }) => {
+const cv = ({ jobs = [] }) => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (

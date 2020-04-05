@@ -2,12 +2,15 @@ import matter from "gray-matter";
 
 import CV from "./CV/CV";
 
-export async function getStaticProps() {
-  const booking = await import("./CV/posts/booking.md");
-  const rsh = await import("./CV/posts/robertstreethub.md");
-  const adxba = await import("./CV/posts/adxba.md");
+const JOBS = ["booking", "robertstreethub", "adxba"];
 
-  const jobs = [booking, rsh, adxba];
+export async function getStaticProps() {
+  const jobImports = JOBS.map(async name => {
+    return await import(`./CV/posts/${name}.md`);
+  });
+
+  const jobs = await Promise.all(jobImports);
+
   const formattedJobs = jobs.map(content => {
     const data = matter(content.default);
     return {
