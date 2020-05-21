@@ -1,13 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 
-import {
-  COLOURS,
-  FONT_SIZE,
-  SPACING,
-  BORDER_RADIUS,
-  BREAKPOINTS,
-  SHADOWS
-} from "../../../styles";
+import ExpandableImage from "../../../components/ExpandableImage";
+import { COLOURS, FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
 
 const ProjectLink = ({ text, href }) => (
   <a
@@ -16,7 +10,7 @@ const ProjectLink = ({ text, href }) => (
       color: COLOURS.primary,
       fontSize: FONT_SIZE.large,
       fontWeight: "bold",
-      textDecoration: "none"
+      textDecoration: "none",
     }}
     target="_blank"
   >
@@ -30,7 +24,7 @@ const Project = () => {
     <div className="project">
       <div className="project__main">
         <div className="project__thumbnail">
-          <img src="img/rf2.png" className="project__img" />
+          <ExpandableImage imgSrc="img/rf2.png" />
         </div>
         <div className="project__description">
           <h2 className="project__title">Sim Racing Overlay</h2>
@@ -57,12 +51,6 @@ const Project = () => {
 
         .project__thumbnail {
           flex: 0 0 430px;
-        }
-
-        .project__img {
-          max-width: 100%;
-          border-radius: ${BORDER_RADIUS};
-          box-shadow: ${SHADOWS.medium};
         }
 
         .project__description {
