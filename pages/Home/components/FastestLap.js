@@ -10,7 +10,7 @@ const STYLE_VARS = {
   colorDestructive: "#6c0cb3",
   colorConstructive: "#1cad10",
   colorPurple: "#6c0cb3",
-  colorPink: "#cd04db"
+  colorPink: "#cd04db",
 };
 
 const INITIAL_WIDTH = 200;
@@ -18,21 +18,21 @@ const INITIAL_WIDTH = 200;
 const DEFAULT_SPRING = {
   type: "spring",
   damping: 10,
-  stiffness: 30
+  stiffness: 30,
 };
 
 const FastestLap = ({ firstName, lastName, lapTime }) => (
   <>
     <motion.div
-      initial={{ y: -150, opacity: 0 }}
-      animate={{ y: 0, x: -150, opacity: 1 }}
+      initial={{ y: -150, x: 150, opacity: 0 }}
+      animate={{ y: 0, x: 0, opacity: 1 }}
       transition={{
         ...DEFAULT_SPRING,
         delay: 1,
         x: {
           ...DEFAULT_SPRING,
-          delay: 3
-        }
+          delay: 3,
+        },
       }}
       style={{ width: INITIAL_WIDTH }}
       className="fastest-lap"
@@ -41,11 +41,11 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         className="fastest-lap__container"
         initial={{
           backgroundColor: STYLE_VARS.colorPurple,
-          color: STYLE_VARS.colorWhite
+          color: STYLE_VARS.colorWhite,
         }}
         animate={{
           backgroundColor: STYLE_VARS.colorPrimaryDark,
-          color: STYLE_VARS.colorPink
+          color: STYLE_VARS.colorPink,
         }}
         transition={DEFAULT_SPRING}
       >
@@ -56,21 +56,21 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         initial={{
           width: 0,
           backgroundColor: STYLE_VARS.colorPurple,
-          opacity: 0
+          opacity: 0,
         }}
         animate={{
           x: INITIAL_WIDTH,
           width: 300,
           backgroundColor: STYLE_VARS.colorPrimaryDark,
-          opacity: 1
+          opacity: 1,
         }}
         transition={{
           ...DEFAULT_SPRING,
           delay: 3,
           backgroundColor: {
             ...DEFAULT_SPRING,
-            delay: 3
-          }
+            delay: 3,
+          },
         }}
       >
         <div>
@@ -87,7 +87,6 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         height: 80px;
         font-size: ${FONT_SIZE.large};
         position: relative;
-        margin: 0 auto;
       }
       
       .fastest-lap__container {
