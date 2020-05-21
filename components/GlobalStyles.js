@@ -10,6 +10,7 @@ export default () => (
         font-family: "Open Sans", sans-serif;
         height: 100%;
         overflow-x: hidden;
+        background-color: ${COLOURS.darkerGrey};
       }
 
       div {

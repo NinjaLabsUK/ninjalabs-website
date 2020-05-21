@@ -11,7 +11,7 @@ import {
   SPACING,
   FONT_SIZE,
   SHADOWS,
-  BREAKPOINTS
+  BREAKPOINTS,
 } from "../../styles";
 
 const Heading = () => (
@@ -22,9 +22,10 @@ const Heading = () => (
           <img src="/img/me_square.jpeg" className="heading__image" />
           <div className="heading__text-container">
             <h1 className="heading__title">Kieran Chadwick</h1>
-            <p className="heading__subtitle">Frontend Engineer</p>
+            <p className="heading__subtitle">Software Developer</p>
           </div>
         </div>
+        <AboutMe />
       </Container>
     </div>
     <style jsx>
@@ -33,11 +34,18 @@ const Heading = () => (
           padding: ${SPACING.large} 0;
           background-color: ${COLOURS.darkerGrey};
           color: ${COLOURS.white};
+          background: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.8),
+              ${COLOURS.darkerGrey}
+            ),
+            linear-gradient(90deg, ${COLOURS.primary}, ${COLOURS.blue});
         }
 
         .heading__wrapper {
           display: flex;
           align-items: center;
+          margin-bottom: ${SPACING.large};
         }
 
         .heading__image {
@@ -75,7 +83,7 @@ const cv = ({ jobs = [] }) => {
             style={{
               maxWidth: "180px",
               maxHeight: "70px",
-              marginBottom: SPACING.medium
+              marginBottom: SPACING.medium,
             }}
           />
           <div>{selectedJob.body}</div>
@@ -83,67 +91,69 @@ const cv = ({ jobs = [] }) => {
       )}
 
       <Heading />
+      <div style={{ backgroundColor: COLOURS.white }}>
+        <Container>
+          <h2>Employment</h2>
+          <div className="cv__jobs">
+            {jobs.map((job, index) => (
+              <JobCard
+                key={`job-${index}`}
+                companyName={job.data.company}
+                position={job.data.position}
+                description={job.data.description}
+                colour={`#${job.data.colour}`}
+                onMoreClick={() => setSelectedJob(job)}
+              />
+            ))}
+          </div>
 
-      <Container>
-        <AboutMe />
-        <div className="cv__jobs">
-          {jobs.map((job, index) => (
-            <JobCard
-              key={`job-${index}`}
-              companyName={job.data.company}
-              position={job.data.position}
-              description={job.data.description}
-              colour={`#${job.data.colour}`}
-              onMoreClick={() => setSelectedJob(job)}
-            />
-          ))}
-        </div>
+          <h2>Education 😴</h2>
 
-        <h2>Education 😴</h2>
-
-        <Accordion
-          items={[
-            {
-              title: "Level 4 Software Development Apprenticeship 2016 - 2017",
-              content:
-                "IT, Software & Web and Telecoms Professionals Higher Apprenticeship"
-            },
-            {
-              title: "Level 3 Software Development Apprenticeship 2014 - 2015",
-              content:
-                "IT, Software, Web and Telecoms Professionals Advanced Apprenticeship"
-            },
-            {
-              title: "Aquinas College, Stockport 2012-2014",
-              content: () => (
-                <table style={{ width: "100%", maxWidth: "400px" }}>
-                  <thead>
-                    <tr>
-                      <th>A Levels</th>
-                      <th>AS Levels</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Computing B</td>
-                      <td>Computing B</td>
-                    </tr>
-                    <tr>
-                      <td>Maths C</td>
-                      <td>Maths C</td>
-                    </tr>
-                    <tr>
-                      <td>Physics C</td>
-                      <td>Physics C</td>
-                    </tr>
-                  </tbody>
-                </table>
-              )
-            }
-          ]}
-        />
-      </Container>
-
+          <Accordion
+            items={[
+              {
+                title:
+                  "Level 4 Software Development Apprenticeship 2016 - 2017",
+                content:
+                  "IT, Software & Web and Telecoms Professionals Higher Apprenticeship",
+              },
+              {
+                title:
+                  "Level 3 Software Development Apprenticeship 2014 - 2015",
+                content:
+                  "IT, Software, Web and Telecoms Professionals Advanced Apprenticeship",
+              },
+              {
+                title: "Aquinas College, Stockport 2012-2014",
+                content: () => (
+                  <table style={{ width: "100%", maxWidth: "400px" }}>
+                    <thead>
+                      <tr>
+                        <th>A Levels</th>
+                        <th>AS Levels</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Computing B</td>
+                        <td>Computing B</td>
+                      </tr>
+                      <tr>
+                        <td>Maths C</td>
+                        <td>Maths C</td>
+                      </tr>
+                      <tr>
+                        <td>Physics C</td>
+                        <td>Physics C</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                ),
+              },
+            ]}
+          />
+        </Container>
+      </div>
       <style jsx>{`
         .cv__title {
           text-transform: uppercase;

@@ -5,6 +5,7 @@ const Badge = ({ text }) => (
     <span className="badge">{text}</span>
     <style jsx>{`
       .badge {
+        color: ${COLOURS.black};
         background-color: ${COLOURS.primary};
         padding: ${SPACING.smaller} ${SPACING.small};
         border-radius: ${BORDER_RADIUS};
