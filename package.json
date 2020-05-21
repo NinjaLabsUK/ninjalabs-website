@@ -14,7 +14,7 @@
     "url": "git+https://github.com/NinjaLabsUK/ninjalabs-website.git"
   },
   "keywords": [],
-  "author": "kieran.chadwick@outlook.com",
+  "author": "Kieran Chadwick",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NinjaLabsUK/ninjalabs-website/issues"
@@ -24,7 +24,7 @@
     "express": "^4.17.1",
     "framer-motion": "^1.10.3",
     "gray-matter": "^4.0.2",
-    "next": "^9.3.4",
+    "next": "^9.4.2",
     "raw-loader": "^4.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
