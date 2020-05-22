@@ -1,12 +1,6 @@
 import Badge from "../../../components/Badge";
 
-const SKILLS = [
-  "React",
-  "Node.js",
-  "Docker",
-  "Typescript",
-  "AWS Lambda/Serverless",
-];
+const SKILLS = ["React", "Node.js", "Docker", "Typescript", "AWS"];
 
 const AboutMe = () => (
   <>

@@ -7,6 +7,7 @@ import {
   SPACING,
   BREAKPOINTS,
   BORDER_RADIUS,
+  SHADOWS,
 } from "../../../styles";
 
 const ProjectExtra = () => {
@@ -19,7 +20,7 @@ const ProjectExtra = () => {
   return (
     <div className="project-extra">
       <div style={{ flexShrink: 0, flexBasis: "520px" }}>
-        <h2 className="project-extra__heading">Built with Framer Motion</h2>
+        <h2>Built with Framer Motion</h2>
 
         <p className="project-extra__description">
           Position changes and fastest lap animated with Framer Motion to keep
@@ -38,11 +39,6 @@ const ProjectExtra = () => {
         <span onClick={onReplay} className="project-extra__replay">
           Replay animation
         </span>
-
-        {/* <a className="project__replay" onClick={onReplay}>
-                Replay animation&nbsp;
-                <MdRefresh />
-              </a> */}
       </div>
       <div className="project-extra__img-container">
         <img src="img/framer.jpg" className="project-extra__img" />
@@ -55,11 +51,6 @@ const ProjectExtra = () => {
           align-items: center;
         }
 
-        .project-extra__heading {
-          marginbottom: ${SPACING.medium};
-          fontsize: ${FONT_SIZE.larger};
-        }
-
         .project-extra__description {
           font-size: ${FONT_SIZE.large};
           margin-bottom: ${SPACING.larger};
@@ -68,6 +59,7 @@ const ProjectExtra = () => {
         .project-extra__img {
           width: 100%;
           border-radius: ${BORDER_RADIUS};
+          box-shadow: ${SHADOWS.medium};
         }
 
         .project-extra__img-container {

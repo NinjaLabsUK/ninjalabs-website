@@ -107,7 +107,7 @@ const cv = ({ jobs = [] }) => {
             ))}
           </div>
 
-          <h2>Education 😴</h2>
+          <h2>Education</h2>
 
           <Accordion
             items={[
