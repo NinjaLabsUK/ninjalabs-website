@@ -3,20 +3,9 @@ import ProjectExtra from "./components/ProjectExtra";
 
 import Me from "./components/Me";
 import Layout from "../../components/Layout";
-import Container from "../../components/Container";
-import { COLOURS, FONT_SIZE, SPACING } from "../../styles";
+import Section from "../../components/Section";
 
-const Section = ({ children, style, light }) => (
-  <div
-    style={{
-      backgroundColor: light ? COLOURS.white : COLOURS.darkerGrey,
-      color: light ? COLOURS.black : COLOURS.white,
-      ...style,
-    }}
-  >
-    <Container>{children}</Container>
-  </div>
-);
+import { COLOURS } from "../../styles";
 
 const Home = () => {
   return (

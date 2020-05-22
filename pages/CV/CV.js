@@ -3,6 +3,7 @@ import { useState } from "react";
 import AboutMe from "./components/AboutMe";
 import JobCard from "./components/JobCard";
 import Layout from "../../components/Layout";
+import Section from "../../components/Section";
 import Container from "../../components/Container";
 import Modal from "../../components/Modal";
 import Accordion from "../../components/Accordion";
@@ -91,76 +92,72 @@ const cv = ({ jobs = [] }) => {
       )}
 
       <Heading />
-      <div style={{ backgroundColor: COLOURS.white }}>
-        <Container>
-          <h2>Employment</h2>
-          <div className="cv__jobs">
-            {jobs.map((job, index) => (
-              <JobCard
-                key={`job-${index}`}
-                companyName={job.data.company}
-                position={job.data.position}
-                description={job.data.description}
-                colour={`#${job.data.colour}`}
-                onMoreClick={() => setSelectedJob(job)}
-              />
-            ))}
-          </div>
 
-          <h2>Education</h2>
+      <Section>
+        <h2 className="cv__heading">Employment</h2>
+        <div className="cv__jobs">
+          {jobs.map((job, index) => (
+            <JobCard
+              key={`job-${index}`}
+              companyName={job.data.company}
+              position={job.data.position}
+              description={job.data.description}
+              colour={`#${job.data.colour}`}
+              onMoreClick={() => setSelectedJob(job)}
+            />
+          ))}
+        </div>
 
-          <Accordion
-            items={[
-              {
-                title:
-                  "Level 4 Software Development Apprenticeship 2016 - 2017",
-                content:
-                  "IT, Software & Web and Telecoms Professionals Higher Apprenticeship",
-              },
-              {
-                title:
-                  "Level 3 Software Development Apprenticeship 2014 - 2015",
-                content:
-                  "IT, Software, Web and Telecoms Professionals Advanced Apprenticeship",
-              },
-              {
-                title: "Aquinas College, Stockport 2012-2014",
-                content: () => (
-                  <table style={{ width: "100%", maxWidth: "400px" }}>
-                    <thead>
-                      <tr>
-                        <th>A Levels</th>
-                        <th>AS Levels</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Computing B</td>
-                        <td>Computing B</td>
-                      </tr>
-                      <tr>
-                        <td>Maths C</td>
-                        <td>Maths C</td>
-                      </tr>
-                      <tr>
-                        <td>Physics C</td>
-                        <td>Physics C</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                ),
-              },
-            ]}
-          />
-        </Container>
-      </div>
+        <h2 className="cv__heading">Education</h2>
+        <Accordion
+          items={[
+            {
+              title: "Level 4 Software Development Apprenticeship 2016 - 2017",
+              content:
+                "IT, Software & Web and Telecoms Professionals Higher Apprenticeship",
+            },
+            {
+              title: "Level 3 Software Development Apprenticeship 2014 - 2015",
+              content:
+                "IT, Software, Web and Telecoms Professionals Advanced Apprenticeship",
+            },
+            {
+              title: "Aquinas College, Stockport 2012-2014",
+              content: () => (
+                <table style={{ width: "100%", maxWidth: "400px" }}>
+                  <thead>
+                    <tr>
+                      <th>A Levels</th>
+                      <th>AS Levels</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Computing B</td>
+                      <td>Computing B</td>
+                    </tr>
+                    <tr>
+                      <td>Maths C</td>
+                      <td>Maths C</td>
+                    </tr>
+                    <tr>
+                      <td>Physics C</td>
+                      <td>Physics C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              ),
+            },
+          ]}
+        />
+      </Section>
       <style jsx>{`
-        .cv__title {
-          text-transform: uppercase;
+        .cv__heading {
+          margin-bottom: ${SPACING.larger};
         }
 
         .cv__jobs {
-          margin: ${SPACING.medium} 0;
+          margin-bottom: ${SPACING.largest};
           overflow-x: auto;
           white-space: nowrap;
           -webkit-overflow-scrolling: touch;

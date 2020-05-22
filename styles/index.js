@@ -9,7 +9,7 @@ export const COLOURS = {
   black: "#000000",
   darkerGrey: "#0f0f0f",
   darkGrey: "#141414",
-  grey: "#8e8e8e",
+  grey: "#525252",
   blue: "#1d57f5",
   lightGrey: "#e8e8e8",
   primary: "#fbe102",

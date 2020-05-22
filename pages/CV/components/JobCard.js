@@ -1,12 +1,12 @@
 import Button from "../../../components/Button";
-import { SPACING, SHADOWS, FONT_SIZE } from "../../../styles";
+import { SPACING, SHADOWS, FONT_SIZE, COLOURS } from "../../../styles";
 
 const JobCard = ({
   companyName,
   position,
   description,
   colour,
-  onMoreClick
+  onMoreClick,
 }) => (
   <div className="job-card">
     <div className="job-card__wrapper">
@@ -28,11 +28,12 @@ const JobCard = ({
         width: 280px;
         height: 290px;
         padding: ${SPACING.medium};
-        margin: ${SPACING.medium} ${SPACING.small};
+        margin: 0 ${SPACING.small};
         display: inline-block;
         white-space: normal;
         vertical-align: top;
         border-bottom: 4px solid ${colour};
+        background-color: ${COLOURS.darkGrey};
       }
 
       .job-card__wrapper {

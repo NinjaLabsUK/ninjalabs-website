@@ -6,7 +6,7 @@ import { SPACING, COLOURS, FONT_SIZE, BORDER_RADIUS, SHADOWS } from "../styles";
 const Accordion = ({ items = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const handleClick = index => {
+  const handleClick = (index) => {
     setSelectedIndex(index === selectedIndex ? null : index);
   };
 
@@ -46,11 +46,12 @@ const Accordion = ({ items = [] }) => {
           text-align: left;
           border: none;
           width: 100%;
-          background-color: ${COLOURS.white};
+          background-color: ${COLOURS.darkGrey};
           font-size: ${FONT_SIZE.medium};
           font-weight: bold;
           padding: ${SPACING.medium};
           cursor: pointer;
+          color: ${COLOURS.white};
         }
 
         .accordion__icon-container {
@@ -62,6 +63,7 @@ const Accordion = ({ items = [] }) => {
         .accordion__content {
           width: 100%;
           padding: ${SPACING.medium};
+          background-color: ${COLOURS.darkGrey};
           display: none;
         }
 
