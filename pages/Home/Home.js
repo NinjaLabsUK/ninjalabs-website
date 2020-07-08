@@ -1,5 +1,6 @@
 import Project from "./components/Project";
 import ProjectExtra from "./components/ProjectExtra";
+import Project2 from "./components/Project2";
 
 import Me from "./components/Me";
 import Layout from "../../components/Layout";
@@ -20,6 +21,14 @@ const Home = () => {
         }}
       >
         <ProjectExtra />
+      </Section>
+
+      <Section
+        style={{
+          background: "#1c4aec",
+        }}
+      >
+        <Project2 />
       </Section>
       <Section>
         <Me />
