@@ -25,7 +25,7 @@ const Home = () => {
 
       <Section
         style={{
-          background: "#1c4aec",
+          background: "#0652dd",
         }}
       >
         <Project2 />
