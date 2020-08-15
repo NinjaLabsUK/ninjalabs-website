@@ -25,7 +25,10 @@ const Home = () => {
 
       <Section
         style={{
-          background: "#0652dd",
+          background: `linear-gradient(to right top,
+            #0099ff,#008dfb,#0080f5,#0073ef,
+            #0065e8,#375ee4,#4f56df,#624ed9,
+            #824ad5,#9d46d0,#b342c9,#c73ec2)`,
         }}
       >
         <Project2 />

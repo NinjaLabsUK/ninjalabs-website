@@ -40,9 +40,6 @@ const ProjectExtra = () => {
           Replay animation
         </span>
       </div>
-      <div className="project-extra__img-container">
-        <img src="img/framer.jpg" className="project-extra__img" />
-      </div>
       <style jsx>{`
         .project-extra {
           margin: 40px 0;
@@ -54,16 +51,6 @@ const ProjectExtra = () => {
         .project-extra__description {
           font-size: ${FONT_SIZE.large};
           margin-bottom: ${SPACING.larger};
-        }
-
-        .project-extra__img {
-          width: 100%;
-          border-radius: ${BORDER_RADIUS};
-          box-shadow: ${SHADOWS.medium};
-        }
-
-        .project-extra__img-container {
-          padding: ${SPACING.larger};
         }
 
         .project-extra__showcase {
