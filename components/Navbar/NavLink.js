@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Link from "../ActiveLink";
 import { SPACING, COLOURS } from "../../styles";
 
-export default ({ title, href }) => (
+const NavLink = ({ title, href }) => (
   <Fragment>
     <Link href={href} activeClassName="active">
       <a className="link">{title}</a>
@@ -22,3 +22,5 @@ export default ({ title, href }) => (
     `}</style>
   </Fragment>
 );
+
+export default NavLink;
