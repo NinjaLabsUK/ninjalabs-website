@@ -34,7 +34,7 @@ const Project2 = () => {
           Build interesting and detailed quizzes with text input or multiple
           choice questions.
         </p>
-        <ProjectLink href="http://kwizgame.com" text="Check it out!" />
+        <ProjectLink href="https://kwizgame.com" text="Check it out!" />
       </div>
 
       <style jsx>{`
