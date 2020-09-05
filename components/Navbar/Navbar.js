@@ -8,19 +8,21 @@ import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
 const SOCIAL_LINKS = [
   {
     href: "https://twitter.com/NinjaLabsUK",
-    icon: <FaTwitter size="1.6em" />
+    icon: <FaTwitter size="1.6em" />,
+    label: "Ninja Labs twitter",
   },
   {
     href: "https://github.com/KChadwick96",
-    icon: <FaGithub size="1.6em" />
-  }
+    icon: <FaGithub size="1.6em" />,
+    label: "My Github",
+  },
 ];
 
 const LINKS = [
   {
     title: "My CV",
-    href: "/cv"
-  }
+    href: "/cv",
+  },
 ];
 
 const Navbar = () => (
@@ -33,8 +35,14 @@ const Navbar = () => (
       </NavLinksContainer>
       <NavLogo />
       <NavLinksContainer>
-        {SOCIAL_LINKS.map(({ href, icon: Icon }, index) => (
-          <a key={`link-${index}`} href={href} className="icon" target="_blank">
+        {SOCIAL_LINKS.map(({ href, icon: Icon, label }, index) => (
+          <a
+            key={`link-${index}`}
+            href={href}
+            aria-label={label}
+            className="icon"
+            target="_blank"
+          >
             {Icon}
           </a>
         ))}

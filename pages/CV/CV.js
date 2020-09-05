@@ -20,7 +20,11 @@ const Heading = () => (
     <div className="heading">
       <Container>
         <div className="heading__wrapper">
-          <img src="/img/me_square.jpeg" className="heading__image" />
+          <img
+            src="/img/me_square.jpeg"
+            className="heading__image"
+            alt="Kieran"
+          />
           <div className="heading__text-container">
             <h1 className="heading__title">Kieran Chadwick</h1>
             <p className="heading__subtitle">Software Developer</p>

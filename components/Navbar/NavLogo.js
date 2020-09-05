@@ -3,7 +3,7 @@ import Link from "next/link";
 const NavLogo = () => (
   <div className="container">
     <Link href="/">
-      <img className="image" src="/img/logo-white.svg" />
+      <img className="image" src="/img/logo-white.svg" alt="Ninja Labs" />
     </Link>
     <style jsx>
       {`

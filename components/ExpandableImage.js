@@ -2,14 +2,14 @@ import { RiFullscreenLine } from "react-icons/ri";
 
 import { BORDER_RADIUS, SHADOWS, SPACING } from "../styles";
 
-const ExpandableImage = ({ imgSrc }) => {
+const ExpandableImage = ({ src, alt = "" }) => {
   const openImage = () => {
     window.open(imgSrc, "_blank");
   };
 
   return (
     <div className="expandable-image" onClick={openImage}>
-      <img src={imgSrc} className="expandable-image__img" />
+      <img src={src} alt={alt} className="expandable-image__img" />
 
       <RiFullscreenLine className="expandable-image__fullscreen" size="24px" />
 

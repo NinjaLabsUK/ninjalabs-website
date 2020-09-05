@@ -22,7 +22,11 @@ const Project2 = () => {
   return (
     <div className="project2">
       <div className="project2__thumbnail">
-        <img src="img/kwiz.png" style={{ maxWidth: "160px" }} />
+        <img
+          src="img/kwiz.png"
+          alt="Online quiz app"
+          style={{ maxWidth: "160px" }}
+        />
       </div>
 
       <div className="project2__description">

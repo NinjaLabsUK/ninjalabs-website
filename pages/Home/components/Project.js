@@ -24,7 +24,7 @@ const Project = () => {
     <div className="project">
       <div className="project__main">
         <div className="project__thumbnail">
-          <ExpandableImage imgSrc="img/rf2.jpg" />
+          <ExpandableImage src="img/rf2.jpg" alt="rFactor racing simulator" />
         </div>
         <div className="project__description">
           <h2 className="project__title">Sim Racing Overlay</h2>
