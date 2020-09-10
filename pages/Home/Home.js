@@ -1,6 +1,7 @@
 import Project from "./components/Project";
 import ProjectExtra from "./components/ProjectExtra";
 import Project2 from "./components/Project2";
+import Sabre from "./components/Sabre";
 
 import Me from "./components/Me";
 import Layout from "../../components/Layout";
@@ -22,6 +23,8 @@ const Home = () => {
       >
         <ProjectExtra />
       </Section>
+
+      <Sabre />
 
       <Section
         style={{
