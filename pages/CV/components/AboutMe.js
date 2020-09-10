@@ -6,7 +6,7 @@ const AboutMe = () => (
   <>
     <p>My name’s Kieran and I’m a software developer from Manchester, UK.</p>
     <p>
-      I primarily focus and enjoy working with React and Node where I am able to
+      I primarily focus and enjoy working with React and Node where I'm able to
       have an influence on both the API and what the user directly interacts
       with. I take pride in writing clean efficient code and take onboard
       criticism as a chance to improve the software I produce and make me a
