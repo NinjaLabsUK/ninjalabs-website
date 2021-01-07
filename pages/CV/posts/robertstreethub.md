@@ -1,6 +1,8 @@
 ---
 company: The Robert Street Hub
-logo: /img/rsh-logo.png
+logoSrc: /img/rsh-logo.png
+logoWidth: 60
+logoHeight: 60
 position: Software Developer
 colour: fbdd02
 description: Working on fashion site ISAWITFIRST as part of a small team. Working in a high pressure environment getting features finished and tested. Using JS, Serverless and Shopify.

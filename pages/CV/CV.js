@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 import AboutMe from "./components/AboutMe";
 import JobCard from "./components/JobCard";
@@ -7,13 +8,7 @@ import Section from "../../components/Section";
 import Container from "../../components/Container";
 import Modal from "../../components/Modal";
 import Accordion from "../../components/Accordion";
-import {
-  COLOURS,
-  SPACING,
-  FONT_SIZE,
-  SHADOWS,
-  BREAKPOINTS,
-} from "../../styles";
+import { COLOURS, SPACING, FONT_SIZE, SHADOWS } from "../../styles";
 
 const Heading = () => (
   <>
@@ -78,19 +73,17 @@ const Heading = () => (
 
 const cv = ({ jobs = [] }) => {
   const [selectedJob, setSelectedJob] = useState(null);
+  console.log(selectedJob?.data);
 
   return (
     <Layout>
       {selectedJob && (
         <Modal
           title={
-            <img
-              src={selectedJob.data.logo}
-              style={{
-                maxWidth: "180px",
-                maxHeight: "70px",
-                marginBottom: SPACING.medium,
-              }}
+            <Image
+              src={selectedJob.data.logoSrc}
+              width={selectedJob.data.logoWidth}
+              height={selectedJob.data.logoHeight}
             />
           }
           onClose={() => setSelectedJob(null)}

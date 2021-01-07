@@ -4,7 +4,7 @@ import { BORDER_RADIUS, SHADOWS, SPACING } from "../styles";
 
 const ExpandableImage = ({ src, alt = "" }) => {
   const openImage = () => {
-    window.open(imgSrc, "_blank");
+    window.open(src, "_blank");
   };
 
   return (
