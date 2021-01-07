@@ -15,11 +15,14 @@ const Heading = () => (
     <div className="heading">
       <Container>
         <div className="heading__wrapper">
-          <img
+          <Image
             src="/img/me_square.jpeg"
             className="heading__image"
-            alt="Kieran"
+            width={100}
+            height={100}
+            alt="My face"
           />
+
           <div className="heading__text-container">
             <h1 className="heading__title">Kieran Chadwick</h1>
             <p className="heading__subtitle">Software Developer</p>
@@ -28,7 +31,7 @@ const Heading = () => (
         <AboutMe />
       </Container>
     </div>
-    <style jsx>
+    <style jsx global>
       {`
         .heading {
           padding: ${SPACING.large} 0;
@@ -50,7 +53,6 @@ const Heading = () => (
 
         .heading__image {
           border-radius: 50%;
-          width: 100px;
           box-shadow: ${SHADOWS.light};
         }
 
@@ -73,7 +75,6 @@ const Heading = () => (
 
 const cv = ({ jobs = [] }) => {
   const [selectedJob, setSelectedJob] = useState(null);
-  console.log(selectedJob?.data);
 
   return (
     <Layout>
@@ -108,7 +109,9 @@ const cv = ({ jobs = [] }) => {
             />
           ))}
         </div>
+      </Section>
 
+      <Section>
         <h2 className="cv__heading">Education</h2>
         <Accordion
           items={[
@@ -152,13 +155,16 @@ const cv = ({ jobs = [] }) => {
           ]}
         />
       </Section>
+
+      {/* <Section>
+        <h2 className="cv__heading">Hobbies & Interests</h2>
+      </Section> */}
       <style jsx>{`
         .cv__heading {
           margin-bottom: ${SPACING.large};
         }
 
         .cv__jobs {
-          margin-bottom: ${SPACING.largest};
           overflow-x: auto;
           white-space: nowrap;
           -webkit-overflow-scrolling: touch;

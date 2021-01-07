@@ -1,14 +1,8 @@
 import { useState } from "react";
 
 import FastestLap from "./FastestLap";
-import {
-  COLOURS,
-  FONT_SIZE,
-  SPACING,
-  BREAKPOINTS,
-  BORDER_RADIUS,
-  SHADOWS,
-} from "../../../styles";
+import Button from "../../../components/Button";
+import { COLOURS, FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
 
 const ProjectExtra = () => {
   const [animationKey, setAnimationKey] = useState(1);
@@ -36,9 +30,7 @@ const ProjectExtra = () => {
           />
         </div>
 
-        <span onClick={onReplay} className="project-extra__replay">
-          Replay animation
-        </span>
+        <Button text="Replay animation" variant="link" onClick={onReplay} />
       </div>
       <style jsx>{`
         .project-extra {
@@ -56,12 +48,6 @@ const ProjectExtra = () => {
         .project-extra__showcase {
           transform-origin: 0 0;
           margin-bottom: ${SPACING.small};
-        }
-
-        .project-extra__replay {
-          cursor: pointer;
-          font-size: ${FONT_SIZE.smaller};
-          color: ${COLOURS.blue};
         }
 
         @media (max-width: ${BREAKPOINTS.tablet}) {

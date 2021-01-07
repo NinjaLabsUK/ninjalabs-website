@@ -7,11 +7,6 @@ import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
 
 const SOCIAL_LINKS = [
   {
-    href: "https://twitter.com/NinjaLabsUK",
-    icon: <FaTwitter size="1.6em" />,
-    label: "Ninja Labs twitter",
-  },
-  {
     href: "https://github.com/KChadwick96",
     icon: <FaGithub size="1.6em" />,
     label: "My Github",
