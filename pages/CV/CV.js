@@ -156,9 +156,16 @@ const cv = ({ jobs = [] }) => {
         />
       </Section>
 
-      {/* <Section>
+      <Section>
         <h2 className="cv__heading">Hobbies & Interests</h2>
-      </Section> */}
+
+        <ul>
+          <li>Developing web applications in my own time</li>
+          <li>Motorsport (Formula 1, Formula E, Indycar).</li>
+          <li>Sim racing</li>
+          <li>Podcasts! (SyntaxFM & Beyond the Grid)</li>
+        </ul>
+      </Section>
       <style jsx>{`
         .cv__heading {
           margin-bottom: ${SPACING.large};

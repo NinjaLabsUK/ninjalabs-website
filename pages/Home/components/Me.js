@@ -10,7 +10,7 @@ const Me = () => {
         A software developer from Manchester, UK currently working at
         Booking.com. You can view my CV&nbsp;
         <Link href="/cv">
-          <span style={{ cursor: "pointer", color: COLOURS.blue }}>here</span>
+          <a>here</a>
         </Link>
       </p>
     </>

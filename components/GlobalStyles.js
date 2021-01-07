@@ -1,6 +1,6 @@
 import { SPACING, COLOURS, FONT_SIZE } from "../styles";
 
-export default () => (
+const GlobalStyles = () => (
   <style jsx global>
     {`
       html,
@@ -15,6 +15,10 @@ export default () => (
 
       div {
         box-sizing: border-box;
+      }
+
+      a {
+        color: ${COLOURS.lightBlue};
       }
 
       h1,
@@ -61,3 +65,5 @@ export default () => (
     `}
   </style>
 );
+
+export default GlobalStyles;
