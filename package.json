@@ -24,10 +24,10 @@
     "express": "^4.17.1",
     "framer-motion": "^1.10.3",
     "gray-matter": "^4.0.2",
-    "next": "^9.5.3",
+    "next": "^10.0.5",
     "raw-loader": "^4.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-icons": "^3.9.0"
   }
 }
