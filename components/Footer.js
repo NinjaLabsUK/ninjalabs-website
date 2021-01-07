@@ -1,10 +1,10 @@
 import Container from "./Container";
-import { COLOURS, FONT_SIZE, SPACING } from "../styles";
+import { COLOURS, FONT_SIZE } from "../styles";
 
 const Footer = () => (
   <footer className="footer">
     <Container>
-      <p className="footer__copyright">© 2020 Kieran</p>
+      <p className="footer__copyright">Built by Kieran Chadwick</p>
     </Container>
     <style jsx>{`
       .footer {
