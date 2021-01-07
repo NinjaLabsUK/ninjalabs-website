@@ -13,7 +13,7 @@ const Accordion = ({ items = [] }) => {
   return (
     <div className="accordion">
       {items.map(({ title, content }, index) => (
-        <div key={`accordion-item-${index}`}>
+        <div key={`accordion-item-${index}`} className="accordion__item">
           <button
             className="accordion__button"
             onClick={() => handleClick(index)}
@@ -38,6 +38,11 @@ const Accordion = ({ items = [] }) => {
           border-radius: ${BORDER_RADIUS};
           box-shadow: ${SHADOWS.light};
           width: 100%;
+          border: 1px solid ${COLOURS.grey};
+        }
+
+        .accordion__item:not(:last-child) {
+          border-bottom: 1px solid ${COLOURS.grey};
         }
 
         .accordion__button {
@@ -65,6 +70,7 @@ const Accordion = ({ items = [] }) => {
           padding: ${SPACING.medium};
           background-color: ${COLOURS.darkGrey};
           display: none;
+          font-size: ${FONT_SIZE.small};
         }
 
         .accordion__content--active {

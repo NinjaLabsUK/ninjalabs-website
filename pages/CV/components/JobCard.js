@@ -36,6 +36,10 @@ const JobCard = ({
         background-color: ${COLOURS.darkGrey};
       }
 
+      .job-card:first-child {
+        margin-left: 0;
+      }
+
       .job-card__wrapper {
         display: flex;
         height: 100%;

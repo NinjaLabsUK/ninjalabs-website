@@ -82,15 +82,19 @@ const cv = ({ jobs = [] }) => {
   return (
     <Layout>
       {selectedJob && (
-        <Modal onClose={() => setSelectedJob(null)}>
-          <img
-            src={selectedJob.data.logo}
-            style={{
-              maxWidth: "180px",
-              maxHeight: "70px",
-              marginBottom: SPACING.medium,
-            }}
-          />
+        <Modal
+          title={
+            <img
+              src={selectedJob.data.logo}
+              style={{
+                maxWidth: "180px",
+                maxHeight: "70px",
+                marginBottom: SPACING.medium,
+              }}
+            />
+          }
+          onClose={() => setSelectedJob(null)}
+        >
           <div>{selectedJob.body}</div>
         </Modal>
       )}
@@ -128,7 +132,7 @@ const cv = ({ jobs = [] }) => {
             {
               title: "Aquinas College, Stockport 2012-2014",
               content: () => (
-                <table style={{ width: "100%", maxWidth: "400px" }}>
+                <table className="cv__grades">
                   <thead>
                     <tr>
                       <th>A Levels</th>
@@ -157,7 +161,7 @@ const cv = ({ jobs = [] }) => {
       </Section>
       <style jsx>{`
         .cv__heading {
-          margin-bottom: ${SPACING.larger};
+          margin-bottom: ${SPACING.large};
         }
 
         .cv__jobs {
@@ -167,11 +171,14 @@ const cv = ({ jobs = [] }) => {
           -webkit-overflow-scrolling: touch;
         }
 
-        @media (max-width: ${BREAKPOINTS.mobile}) {
-          .cv__jobs {
-            margin-left: -${SPACING.medium};
-            margin-right: -${SPACING.medium};
-          }
+        .cv__grades {
+          width: 100%;
+          max-width: 400px;
+          font-size: ${FONT_SIZE.small};
+        }
+
+        .cv__grades th {
+          font-weight: bold;
         }
       `}</style>
     </Layout>

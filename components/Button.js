@@ -25,7 +25,7 @@ const Button = ({ text, onClick = () => null, variant = "default" }) => (
 
       .button--link {
         padding: 0;
-        color: ${COLOURS.blue};
+        color: ${COLOURS.lightBlue};
       }
 
       .button--link:hover {
