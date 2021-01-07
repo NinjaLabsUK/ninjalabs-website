@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { RiCloseLine } from "react-icons/ri";
 
 import Button from "../components/Button";
 import { COLOURS, SPACING, BORDER_RADIUS } from "../styles";
@@ -23,10 +24,14 @@ const Modal = ({ children, title, onClose }) => {
         <div className="modal__wrapper">
           <div className="modal__align">
             <div className="modal__content">
-              <button className="modal__close">Close</button>
-              {title && <div className="modal__title">{title}</div>}
+              <button className="modal__close" onClick={onClose}>
+                <RiCloseLine size={30} />
+              </button>
+              {title && <header className="modal__title">{title}</header>}
               <div className="modal__text">{children}</div>
-              <Button text="Back" onClick={onClose} />
+              <div className="modal__actions">
+                <Button text="Back" onClick={onClose} />
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +65,6 @@ const Modal = ({ children, title, onClose }) => {
           .modal__content {
             background-color: ${COLOURS.darkerGrey};
             max-width: 500px;
-            padding: ${SPACING.larger};
             color: ${COLOURS.white};
             border-radius: ${BORDER_RADIUS};
             display: inline-block;
@@ -68,21 +72,34 @@ const Modal = ({ children, title, onClose }) => {
             position: relative;
           }
 
+          .modal__title {
+            padding: ${SPACING.larger};
+          }
+
           .modal__close {
             display: inline-block;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: ${SPACING.large};
+            right: ${SPACING.large};
             margin-bottom: 0;
             padding: 0;
             text-decoration: none;
             cursor: pointer;
+            background: none;
+            border: none;
+            color: ${COLOURS.white};
+            width: 30px;
+            height: 30px;
           }
 
           .modal__text {
-            margin-bottom: ${SPACING.medium};
-            max-height: 350px;
+            max-height: 360px;
             overflow-y: auto;
+            padding: 0 ${SPACING.larger};
+          }
+
+          .modal__actions {
+            padding: ${SPACING.larger};
           }
         `}
       </style>
