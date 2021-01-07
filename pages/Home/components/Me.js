@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { COLOURS, FONT_SIZE } from "../../../styles";
+import { FONT_SIZE } from "../../../styles";
 
 const Me = () => {
   return (

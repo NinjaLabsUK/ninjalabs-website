@@ -8,7 +8,13 @@ import Section from "../../components/Section";
 import Container from "../../components/Container";
 import Modal from "../../components/Modal";
 import Accordion from "../../components/Accordion";
-import { COLOURS, SPACING, FONT_SIZE, SHADOWS } from "../../styles";
+import {
+  COLOURS,
+  SPACING,
+  FONT_SIZE,
+  SHADOWS,
+  BREAKPOINTS,
+} from "../../styles";
 
 const Heading = () => (
   <>
@@ -175,6 +181,13 @@ const cv = ({ jobs = [] }) => {
           overflow-x: auto;
           white-space: nowrap;
           -webkit-overflow-scrolling: touch;
+          padding-bottom: ${SPACING.medium};
+        }
+
+        @media (max-width: ${BREAKPOINTS.tablet}) {
+          .cv__jobs {
+            margin: 0 -${SPACING.large};
+          }
         }
 
         .cv__grades {

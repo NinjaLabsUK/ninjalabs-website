@@ -1,5 +1,11 @@
 import Button from "../../../components/Button";
-import { SPACING, SHADOWS, FONT_SIZE, COLOURS } from "../../../styles";
+import {
+  SPACING,
+  SHADOWS,
+  FONT_SIZE,
+  COLOURS,
+  BREAKPOINTS,
+} from "../../../styles";
 
 const JobCard = ({
   companyName,
@@ -38,6 +44,12 @@ const JobCard = ({
 
       .job-card:first-child {
         margin-left: 0;
+      }
+
+      @media (max-width: ${BREAKPOINTS.tablet}) {
+        .job-card:first-child {
+          margin-left: ${SPACING.large};
+        }
       }
 
       .job-card__wrapper {
