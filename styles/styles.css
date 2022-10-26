@@ -2,6 +2,7 @@
   --color-white: #ffffff;
   --color-light-grey: #e8e8e8;
   --color-darker-grey: #0f0f0f;
+  --color-grey: #525252;
   --color-blue: #1d57f5;
   --color-light-blue: #24a6ff;
   --color-primary: #fbe102;
@@ -15,6 +16,8 @@
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 24px;
+
+  --border-radius: 3px;
 
   --shadow-light: 0 5px 10px rgba(0, 0, 0, 0.12);
   --shadow-medium: 0 5px 10px rgba(0, 0, 0, 0.4);
