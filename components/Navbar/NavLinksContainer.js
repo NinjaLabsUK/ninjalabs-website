@@ -1,4 +1,4 @@
-export default ({ children }) => (
+const NavLinksContainer = ({ children }) => (
   <div className="container">
     {children}
     <style jsx>
@@ -11,3 +11,5 @@ export default ({ children }) => (
     </style>
   </div>
 );
+
+export default NavLinksContainer;

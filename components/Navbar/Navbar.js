@@ -1,4 +1,4 @@
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import NavLinksContainer from "./NavLinksContainer";
 import NavLink from "./NavLink";
