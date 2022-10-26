@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color-overlay);
+  text-align: center;
+}
+
+.wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.align {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.content {
+  background-color: var(--color-darker-grey);
+  max-width: 500px;
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+.title {
+  padding: var(--spacing-larger);
+}
+
+.close {
+  display: inline-block;
+  position: absolute;
+  top: var(--spacing-large);
+  right: var(--spacing-large);
+  margin-bottom: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--border-radius);
+}
+
+.close:hover {
+  background-color: var(--color-grey);
+}
+
+.text {
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 0 var(--spacing-larger);
+}
+
+.actions {
+  padding: var(--spacing-larger);
+}

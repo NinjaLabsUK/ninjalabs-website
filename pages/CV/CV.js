@@ -6,8 +6,8 @@ import JobCard from "./components/JobCard";
 import Layout from "../../components/Layout";
 import Section from "../../components/Section";
 import Container from "../../components/Container";
-import Modal from "../../components/Modal";
-import Accordion from "../../components/Accordion";
+import Modal from "../../components/Modal/Modal";
+import Accordion from "../../components/Accordion/Accordion";
 import styles from "./CV.module.css";
 
 const Heading = () => (

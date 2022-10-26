@@ -1,11 +1,15 @@
 :root {
   --color-white: #ffffff;
   --color-light-grey: #e8e8e8;
+  --color-dark-grey: #141414;
   --color-darker-grey: #0f0f0f;
   --color-grey: #525252;
   --color-blue: #1d57f5;
   --color-light-blue: #24a6ff;
   --color-primary: #fbe102;
+  --color-light-primary: #e3d870;
+  --color-dark-primary: #ebd202;
+  --color-overlay: rgba(0, 0, 0, 0.75);
 
   --font-size-small: 14px;
   --font-size-large: 20px;
@@ -16,6 +20,7 @@
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 24px;
+  --spacing-larger: 30px;
 
   --border-radius: 3px;
 
@@ -74,7 +79,10 @@ p {
 table {
   text-align: left;
   border-collapse: collapse;
-  /* font-size: ${FONT_SIZE.medium}; */
+}
+
+th {
+  font-weight: 700;
 }
 
 th,

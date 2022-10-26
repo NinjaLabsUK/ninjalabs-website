@@ -1,0 +1,26 @@
+.homeSection1 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      var(--color-darker-grey)
+    ),
+    linear-gradient(90deg, #f08, var(--color-blue));
+}
+
+.homeSection2 {
+  background: linear-gradient(
+    to right top,
+    #0099ff,
+    #008dfb,
+    #0080f5,
+    #0073ef,
+    #0065e8,
+    #375ee4,
+    #4f56df,
+    #624ed9,
+    #824ad5,
+    #9d46d0,
+    #b342c9,
+    #c73ec2
+  );
+}

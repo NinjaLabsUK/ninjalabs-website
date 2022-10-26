@@ -23,6 +23,10 @@
   color: var(--color-white);
 }
 
+.accordionButton:hover {
+  background-color: var(--color-darker-grey);
+}
+
 .accordionIconContainer {
   flex-grow: 0;
   flex-shrink: 0;

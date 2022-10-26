@@ -1,23 +1,8 @@
 import { FaChevronRight } from "react-icons/fa";
 
+import Button from "../../../components/Button/Button";
 import ExpandableImage from "../../../components/ExpandableImage";
 import { COLOURS, FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
-
-const ProjectLink = ({ text, href }) => (
-  <a
-    href={href}
-    style={{
-      color: COLOURS.primary,
-      fontSize: FONT_SIZE.large,
-      fontWeight: "bold",
-      textDecoration: "none",
-    }}
-    target="_blank"
-  >
-    {text}
-    <FaChevronRight size="14px" style={{ marginLeft: SPACING.smaller }} />
-  </a>
-);
 
 const Project = () => {
   return (
@@ -32,8 +17,11 @@ const Project = () => {
             Broadcasting overlay built in React. Integrates with OBS to provide
             viewers with a real-time race overview.
           </p>
-          <ProjectLink
+          <Button
             text="View Project"
+            variant="tertiary"
+            size="large"
+            endSlot={<FaChevronRight size="14px" />}
             href="https://rf2.ninja-labs.co.uk"
           />
         </div>

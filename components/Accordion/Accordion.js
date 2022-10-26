@@ -4,7 +4,7 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import styles from "./Accordion.module.css";
 
 const Accordion = ({ items = [] }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState();
 
   const handleClick = (index) => {
     setSelectedIndex(index === selectedIndex ? null : index);
