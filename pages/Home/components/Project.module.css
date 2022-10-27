@@ -19,7 +19,7 @@
 
 .text {
   color: var(--color-white);
-  fontsize: var(--font-size-large);
+  font-size: var(--font-size-large);
 }
 
 @media (--medium-viewport) {
