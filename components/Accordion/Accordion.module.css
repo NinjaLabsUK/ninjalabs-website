@@ -5,11 +5,11 @@
   border: 1px solid var(--color-grey);
 }
 
-.accordionItem:not(:last-child) {
+.item:not(:last-child) {
   border-bottom: 1px solid var(--color-grey);
 }
 
-.accordionButton {
+.button {
   display: flex;
   align-items: center;
   text-align: left;
@@ -23,17 +23,17 @@
   color: var(--color-white);
 }
 
-.accordionButton:hover {
+.button:hover {
   background-color: var(--color-darker-grey);
 }
 
-.accordionIconContainer {
+.iconContainer {
   flex-grow: 0;
   flex-shrink: 0;
   margin-right: var(--spacing-medium);
 }
 
-.accordionContent {
+.content {
   width: 100%;
   padding: var(--spacing-medium);
   background-color: var(--color-dark-grey);
@@ -41,6 +41,6 @@
   font-size: var(--font-size-small);
 }
 
-.accordionContentActive {
+.contentActive {
   display: block;
 }
