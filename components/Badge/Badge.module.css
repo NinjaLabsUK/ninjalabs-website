@@ -1,0 +1,10 @@
+.badge {
+  color: var(--color-darker-grey);
+  background-color: var(--color-primary);
+  padding: var(--spacing-smaller) var(--spacing-small);
+  border-radius: var(--border-radius);
+  margin-right: var(--spacing-smaller);
+  margin-bottom: var(--spacing-smaller);
+  white-space: nowrap;
+  font-size: var(--font-size-small);
+}

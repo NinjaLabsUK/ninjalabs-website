@@ -1,8 +1,9 @@
-import Container from "./Container";
+import Container from "./Container/Container";
 import { COLOURS } from "../styles";
 
-const Section = ({ children, style, light }) => (
+const Section = ({ children, className, style, light }) => (
   <div
+    className={className}
     style={{
       backgroundColor: light ? COLOURS.white : COLOURS.darkerGrey,
       color: light ? COLOURS.black : COLOURS.white,

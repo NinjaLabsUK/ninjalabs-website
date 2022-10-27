@@ -1,22 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 
+import Button from "../../../components/Button/Button";
 import { SPACING, COLOURS, FONT_SIZE, BREAKPOINTS } from "../../../styles";
-
-const ProjectLink = ({ text, href }) => (
-  <a
-    href={href}
-    style={{
-      color: COLOURS.primary,
-      fontSize: FONT_SIZE.large,
-      fontWeight: "bold",
-      textDecoration: "none",
-    }}
-    target="_blank"
-  >
-    {text}
-    <FaChevronRight size="14px" style={{ marginLeft: SPACING.smaller }} />
-  </a>
-);
 
 const Project2 = () => {
   return (
@@ -38,7 +23,13 @@ const Project2 = () => {
           Build interesting and detailed quizzes with text input or multiple
           choice questions.
         </p>
-        <ProjectLink href="https://kwizgame.com" text="Check it out!" />
+        <Button
+          text="Check it out!"
+          href="https://kwizgame.com"
+          variant="tertiary"
+          size="large"
+          endSlot={<FaChevronRight size="14px" />}
+        />
       </div>
 
       <style jsx>{`

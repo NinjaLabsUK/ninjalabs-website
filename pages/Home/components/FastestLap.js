@@ -93,7 +93,6 @@ const FastestLap = ({ firstName, lastName, lapTime }) => (
         box-shadow: ${SHADOWS.light};
         position: absolute;
         z-index: 10;
-        font-weight: bold;
         width: 100%;
         height: 100%;
         display: flex;

@@ -1,0 +1,66 @@
+/* HEADING */
+.heading {
+  padding: var(--spacing-large) 0;
+  background-color: var(--color-darker-grey);
+  color: var(--color-white);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      var(--color-darker-grey)
+    ),
+    linear-gradient(90deg, var(--color-primary), var(--color-blue));
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.headingImage {
+  border-radius: 50%;
+  box-shadow: var(--shadow-light);
+}
+
+.headingTextContainer {
+  margin-left: var(--spacing-large);
+}
+
+.headingTitle {
+  margin-bottom: 0;
+}
+
+.headingSubtitle {
+  margin: 0;
+  font-size: var(--font-size-large);
+}
+/* /HEADING */
+
+/* CV */
+.cvHeading {
+  margin-bottom: var(--spacing-large);
+}
+
+.jobs {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--spacing-medium);
+}
+
+@media (--medium-viewport) {
+  .jobs {
+    margin: 0 calc(-1 * var(--spacing-large));
+  }
+}
+
+.grades {
+  width: 100%;
+  max-width: 400px;
+  font-size: var(--font-size-small);
+}
+
+.grades th {
+  font-weight: bold;
+}
+/* /CV */

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import FastestLap from "./FastestLap";
-import Button from "../../../components/Button";
-import { COLOURS, FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
+import Button from "../../../components/Button/Button";
+import { FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
 
 const ProjectExtra = () => {
   const [animationKey, setAnimationKey] = useState(1);
