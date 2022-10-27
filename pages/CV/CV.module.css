@@ -41,25 +41,26 @@
   margin-bottom: var(--spacing-large);
 }
 
-.cvJobs {
+.jobs {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   padding-bottom: var(--spacing-medium);
 }
 
-@media (max-width: 768px) {
-  .cvJobs {
+@media (--medium-viewport) {
+  .jobs {
     margin: 0 calc(-1 * var(--spacing-large));
   }
 }
-.cvGrades {
+
+.grades {
   width: 100%;
   max-width: 400px;
   font-size: var(--font-size-small);
 }
 
-.cvGrades th {
+.grades th {
   font-weight: bold;
 }
 /* /CV */

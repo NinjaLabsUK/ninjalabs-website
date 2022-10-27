@@ -5,33 +5,31 @@ import AboutMe from "./components/AboutMe";
 import JobCard from "./components/JobCard";
 import Layout from "../../components/Layout";
 import Section from "../../components/Section";
-import Container from "../../components/Container";
+import Container from "../../components/Container/Container";
 import Modal from "../../components/Modal/Modal";
 import Accordion from "../../components/Accordion/Accordion";
 import styles from "./CV.module.css";
 
 const Heading = () => (
-  <>
-    <div className={styles.heading}>
-      <Container>
-        <div className={styles.headingWrapper}>
-          <Image
-            src="/img/me_square.jpeg"
-            className={styles.headingImage}
-            width={100}
-            height={100}
-            alt="My face"
-          />
+  <div className={styles.heading}>
+    <Container>
+      <div className={styles.headingWrapper}>
+        <Image
+          src="/img/me_square.jpeg"
+          className={styles.headingImage}
+          width={100}
+          height={100}
+          alt="My face"
+        />
 
-          <div className={styles.headingTextContainer}>
-            <h1 className={styles.headingTitle}>Kieran Chadwick</h1>
-            <p className={styles.headingSubtitle}>Software Developer</p>
-          </div>
+        <div className={styles.headingTextContainer}>
+          <h1 className={styles.headingTitle}>Kieran Chadwick</h1>
+          <p className={styles.headingSubtitle}>Software Developer</p>
         </div>
-        <AboutMe />
-      </Container>
-    </div>
-  </>
+      </div>
+      <AboutMe />
+    </Container>
+  </div>
 );
 
 const cv = ({ jobs = [] }) => {
@@ -58,7 +56,7 @@ const cv = ({ jobs = [] }) => {
 
       <Section>
         <h2 className={styles.cvHeading}>Employment</h2>
-        <div className={styles.cvJobs}>
+        <div className={styles.jobs}>
           {jobs.map((job, index) => (
             <JobCard
               key={`job-${index}`}
@@ -89,7 +87,7 @@ const cv = ({ jobs = [] }) => {
             {
               title: "Aquinas College, Stockport 2012-2014",
               content: () => (
-                <table className={styles.cvGrades}>
+                <table className={styles.grades}>
                   <thead>
                     <tr>
                       <th>A Levels</th>

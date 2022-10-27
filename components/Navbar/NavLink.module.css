@@ -1,0 +1,14 @@
+.link {
+  padding: var(--spacing-smaller);
+  text-decoration: none;
+  color: var(--color-white);
+  margin-right: var(--spacing-small);
+}
+
+.link:hover {
+  color: var(--color-dark-primary);
+}
+
+.active {
+  color: var(--color-primary);
+}

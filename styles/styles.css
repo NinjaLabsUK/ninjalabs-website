@@ -26,7 +26,17 @@
 
   --shadow-light: 0 5px 10px rgba(0, 0, 0, 0.12);
   --shadow-medium: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+  --container-width: 1024px;
+
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
 }
+
+@custom-media --small-viewport (max-width: 576px);
+@custom-media --medium-viewport (max-width: 1024px);
+@custom-media --large-viewport (min-width: 1025px);
 
 html,
 body {

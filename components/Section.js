@@ -1,4 +1,4 @@
-import Container from "./Container";
+import Container from "./Container/Container";
 import { COLOURS } from "../styles";
 
 const Section = ({ children, className, style, light }) => (

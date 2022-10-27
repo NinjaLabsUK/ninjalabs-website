@@ -1,4 +1,4 @@
-import Container from "./Container";
+import Container from "./Container/Container";
 import { COLOURS, FONT_SIZE } from "../styles";
 
 const Footer = () => (
