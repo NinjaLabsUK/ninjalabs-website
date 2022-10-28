@@ -16,7 +16,13 @@ const Project2 = () => {
 
       <div className="project2__description">
         <h2 className="project__title">Kwizgame.com</h2>
-        <p style={{ color: COLOURS.white, fontSize: FONT_SIZE.large }}>
+        <p
+          style={{
+            color: COLOURS.white,
+            fontSize: FONT_SIZE.large,
+            marginBottom: SPACING.medium,
+          }}
+        >
           Host and manage a quiz or join and battle your friends with realtime
           leaderboards.
           <br />
