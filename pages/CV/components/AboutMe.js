@@ -1,4 +1,5 @@
 import Badge from "../../../components/Badge/Badge";
+import { SPACING } from "../../../styles";
 
 const SKILLS = ["React", "Node.js", "Docker", "Typescript", "AWS"];
 
@@ -12,7 +13,7 @@ const AboutMe = () => (
       criticism as a chance to improve the software I produce and make me a
       better developer.
     </p>
-    <p>My main skills include:</p>
+    <p style={{ marginBottom: SPACING.medium }}>My main skills include:</p>
     <div className="about-me__skills-container">
       {SKILLS.map((skill) => (
         <Badge key={skill} text={skill} />
