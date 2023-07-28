@@ -5,8 +5,18 @@ import { RiCloseLine } from "react-icons/ri";
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
 
-const Portal = ({ children }) => {
-  const portalRef = useRef();
+type ModalProps = {
+  children: JSX.Element;
+  title: string;
+  onClose: () => null;
+};
+
+type PortalProps = {
+  children: JSX.Element;
+};
+
+const Portal: React.FC<PortalProps> = ({ children }) => {
+  const portalRef = useRef<HTMLElement>();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,7 +27,7 @@ const Portal = ({ children }) => {
   return mounted ? createPortal(children, portalRef.current) : [];
 };
 
-const Modal = ({ children, title, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ children, title, onClose }) => {
   return (
     <Portal>
       <div className={styles.modal}>

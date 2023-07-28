@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/AboutMe/AboutMe";
 import JobCard from "./components/JobCard/JobCard";
 import Layout from "../../components/Layout";
 import Section from "../../components/Section";
@@ -86,7 +86,7 @@ const cv = ({ jobs = [] }) => {
             },
             {
               title: "Aquinas College, Stockport 2012-2014",
-              content: () => (
+              content: (
                 <table className={styles.grades}>
                   <thead>
                     <tr>

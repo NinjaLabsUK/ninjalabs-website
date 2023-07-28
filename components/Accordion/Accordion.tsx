@@ -3,7 +3,16 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 import styles from "./Accordion.module.css";
 
-const Accordion = ({ items = [] }) => {
+type AccordionItem = {
+  title: string;
+  content: JSX.Element | string;
+};
+
+type AccordionProps = {
+  items: AccordionItem[];
+};
+
+const Accordion: React.FC<AccordionProps> = ({ items = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState();
 
   const handleClick = (index) => {
@@ -25,7 +34,7 @@ const Accordion = ({ items = [] }) => {
               selectedIndex === index && styles.contentActive
             }`}
           >
-            {typeof content === "function" ? content() : content}
+            {content}
           </div>
         </div>
       ))}
