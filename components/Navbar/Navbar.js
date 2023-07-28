@@ -24,8 +24,8 @@ const Navbar = () => (
   <nav>
     <div className="container">
       <NavLinksContainer>
-        {LINKS.map((props, index) => (
-          <NavLink key={`link-${index}`} {...props} />
+        {LINKS.map(({ href, title }, index) => (
+          <NavLink key={`link-${index}`} title={title} href={href} />
         ))}
       </NavLinksContainer>
       <NavLogo />

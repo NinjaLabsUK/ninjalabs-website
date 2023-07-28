@@ -9,9 +9,7 @@ const Me = () => {
       <p>
         A software developer from Manchester, UK currently working at
         Booking.com. You can view my CV&nbsp;
-        <Link href="/cv">
-          <a>here</a>
-        </Link>
+        <Link href="/cv">here</Link>
       </p>
     </>
   );
