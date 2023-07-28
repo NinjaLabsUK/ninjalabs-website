@@ -18,7 +18,7 @@
 .description {
   font-size: var(--font-size-small);
   max-width: 100%;
-  text-wrap: balance;
+  text-wrap: wrap;
   margin-bottom: var(--spacing-medium);
 }
 
