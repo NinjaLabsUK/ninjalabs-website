@@ -45,8 +45,10 @@
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: var(--spacing-medium);
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
   display: flex;
+  align-items: stretch;
 }
 
 .jobs > *:not(:last-child) {
