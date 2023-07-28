@@ -2,7 +2,7 @@
   color: var(--color-darker-grey);
   background-color: var(--color-primary);
   padding: var(--spacing-smaller) var(--spacing-small);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-100);
   margin-right: var(--spacing-smaller);
   margin-bottom: var(--spacing-smaller);
   white-space: nowrap;

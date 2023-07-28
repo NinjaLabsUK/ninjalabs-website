@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 const Footer = () => (
   <footer className={styles.footer}>
     <Container>
-      <p className={styles.copyright}>Built by Kieran Chadwick</p>
+      <p className={styles.copyright}>Built by me</p>
     </Container>
   </footer>
 );

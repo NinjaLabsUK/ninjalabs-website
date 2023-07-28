@@ -3,7 +3,7 @@ company: Booking.com
 logoSrc: /img/booking-logo.png
 logoWidth: 180
 logoHeight: 30
-position: Frontend Software Engineer
+position: Senior Frontend Engineer
 colour: 113480
 description: Primarily focused on the development of the Booking.com Taxi Partner Portal. Using React, Nodejs and AWS Troposphere.
 ---

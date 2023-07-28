@@ -1,5 +1,5 @@
 .accordion {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-200);
   box-shadow: var(--shadow-light);
   width: 100%;
   border: 1px solid var(--color-grey);
@@ -7,6 +7,16 @@
 
 .item:not(:last-child) {
   border-bottom: 1px solid var(--color-grey);
+}
+
+.item:first-child > button {
+  border-top-left-radius: var(--border-radius-200);
+  border-top-right-radius: var(--border-radius-200);
+}
+
+.item:last-child > button {
+  border-bottom-left-radius: var(--border-radius-200);
+  border-bottom-right-radius: var(--border-radius-200);
 }
 
 .button {

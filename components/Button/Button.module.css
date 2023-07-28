@@ -1,5 +1,5 @@
 .button {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-100);
   padding: var(--spacing-small) var(--spacing-large);
   font-size: var(--font-size-medium);
   cursor: pointer;
@@ -21,14 +21,14 @@
 }
 
 .link {
+  margin-left: calc(-1 * var(--spacing-smaller));
   background-color: transparent;
-  padding: 0;
+  padding: var(--spacing-smaller);
   color: var(--color-light-blue);
 }
 
 .link:hover {
-  background-color: transparent;
-  text-decoration: underline;
+  background-color: rgb(65 65 154 / 52%);
 }
 
 .tertiary {

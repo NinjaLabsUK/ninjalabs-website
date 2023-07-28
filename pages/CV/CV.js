@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import AboutMe from "./components/AboutMe";
-import JobCard from "./components/JobCard";
+import JobCard from "./components/JobCard/JobCard";
 import Layout from "../../components/Layout";
 import Section from "../../components/Section";
 import Container from "../../components/Container/Container";
@@ -24,7 +24,7 @@ const Heading = () => (
 
         <div className={styles.headingTextContainer}>
           <h1 className={styles.headingTitle}>Kieran Chadwick</h1>
-          <p className={styles.headingSubtitle}>Software Developer</p>
+          <p className={styles.headingSubtitle}>Frontend Engineer</p>
         </div>
       </div>
       <AboutMe />

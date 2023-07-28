@@ -46,11 +46,17 @@
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   padding-bottom: var(--spacing-medium);
+  display: flex;
+}
+
+.jobs > *:not(:last-child) {
+  margin-right: var(--spacing-medium);
 }
 
 @media (--medium-viewport) {
   .jobs {
     margin: 0 calc(-1 * var(--spacing-large));
+    padding: 0 var(--spacing-large);
   }
 }
 

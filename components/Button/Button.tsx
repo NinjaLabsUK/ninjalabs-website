@@ -1,6 +1,18 @@
 import styles from "./Button.module.css";
 
-const Button = ({
+type ButtonVariant = "primary" | "link" | "tertiary";
+type ButtonSize = "large" | "medium";
+
+type ButtonProps = {
+  text: string;
+  onClick?: () => void;
+  href?: string;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  endSlot?: React.ReactNode;
+};
+
+const Button: React.FC<ButtonProps> = ({
   text,
   onClick = () => null,
   href,

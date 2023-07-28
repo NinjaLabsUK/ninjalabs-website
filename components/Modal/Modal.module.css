@@ -23,10 +23,10 @@
 }
 
 .content {
-  background-color: var(--color-darker-grey);
+  background-color: var(--color-dark-grey);
   max-width: 500px;
   color: var(--color-white);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-200);
   display: inline-block;
   text-align: left;
   position: relative;
@@ -50,7 +50,7 @@
   color: var(--color-white);
   width: 30px;
   height: 30px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-100);
 }
 
 .close:hover {

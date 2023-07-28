@@ -1,0 +1,30 @@
+.wrapper {
+  box-shadow: var(--shadow-light);
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: var(--border-radius-200);
+}
+
+.container {
+  background-color: var(--color-dark-grey);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.description {
+  font-size: var(--font-size-small);
+  max-width: 100%;
+  text-wrap: balance;
+  margin-bottom: var(--spacing-medium);
+}
+
+.bar {
+  width: 100%;
+  height: var(--spacing-small);
+  border-bottom-left-radius: var(--border-radius-200);
+  border-bottom-right-radius: var(--border-radius-200);
+}
