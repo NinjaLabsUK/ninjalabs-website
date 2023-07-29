@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { RiCloseLine } from "react-icons/ri";
+import { createFocusTrap } from "focus-trap";
 
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
@@ -20,9 +21,22 @@ const Portal: React.FC<PortalProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    portalRef.current = document.getElementById("modal");
+    const modalEl = document.getElementById("modal");
+    portalRef.current = modalEl;
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      const modalEl = document.getElementById("modal");
+      let trap = createFocusTrap(modalEl);
+      trap.activate();
+
+      return () => {
+        trap.deactivate();
+      };
+    }
+  }, [mounted]);
 
   return mounted ? createPortal(children, portalRef.current) : [];
 };

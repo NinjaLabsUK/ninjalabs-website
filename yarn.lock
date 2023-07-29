@@ -343,6 +343,13 @@ finalhandler@1.2.0:
     statuses "2.0.1"
     unpipe "~1.0.0"
 
+focus-trap@^7.5.2:
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.5.2.tgz#e5ee678d10a18651f2591ffb66c949fb098d57cf"
+  integrity sha512-p6vGNNWLDGwJCiEjkSK6oERj/hEyI9ITsSwIUICBoKLlWiTWXJRfQibCwcoi50rTZdbi87qDtUlMCmQwsGSgPw==
+  dependencies:
+    tabbable "^6.2.0"
+
 forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
@@ -836,6 +843,11 @@ styled-jsx@5.1.1:
   integrity sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==
   dependencies:
     client-only "0.0.1"
+
+tabbable@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.2.0.tgz#732fb62bc0175cfcec257330be187dcfba1f3b97"
+  integrity sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==
 
 toidentifier@1.0.1:
   version "1.0.1"

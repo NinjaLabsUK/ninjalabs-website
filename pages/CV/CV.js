@@ -44,6 +44,7 @@ const cv = ({ jobs = [] }) => {
               src={selectedJob.data.logoSrc}
               width={selectedJob.data.logoWidth}
               height={selectedJob.data.logoHeight}
+              alt={`Company logo for ${selectedJob.data.company}`}
             />
           }
           onClose={() => setSelectedJob(null)}
