@@ -2,13 +2,13 @@
   height: 110px;
   width: 100%;
   background-color: var(--color-grey);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-300);
 }
 
 .bar {
   background-color: var(--color-dark-primary);
   height: 100%;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-300);
   transition: width 1s ease-in-out;
   position: relative;
 }

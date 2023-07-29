@@ -42,6 +42,18 @@ const Portal: React.FC<PortalProps> = ({ children }) => {
 };
 
 const Modal: React.FC<ModalProps> = ({ children, title, onClose }) => {
+  useEffect(() => {
+    const handleKeyPress = (ev: KeyboardEvent) => {
+      if (ev.code === "Escape") onClose();
+    };
+
+    document.addEventListener("keypress", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keypress", handleKeyPress);
+    };
+  }, []);
+
   return (
     <Portal>
       <div className={styles.modal}>

@@ -14,7 +14,7 @@ import styles from "./Countdown.module.css";
 
 const DATE_FORMAT = "do MMMM yyyy";
 const START_DATE = new Date(2022, 8, 3);
-const END_DATE = new Date(2023, 6, 3);
+const END_DATE = new Date(2023, 8, 3);
 const START_TO_END_DAYS = Math.abs(differenceInDays(START_DATE, END_DATE));
 
 const Countdown = () => {
