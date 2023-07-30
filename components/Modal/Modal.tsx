@@ -22,15 +22,18 @@ const Portal: React.FC<PortalProps> = ({ children }) => {
 
   useEffect(() => {
     const modalEl = document.getElementById("modal");
-    portalRef.current = modalEl;
+    if (modalEl) portalRef.current = modalEl;
     setMounted(true);
   }, []);
 
   useEffect(() => {
     if (mounted) {
+      let trap;
       const modalEl = document.getElementById("modal");
-      let trap = createFocusTrap(modalEl);
-      trap.activate();
+      if (modalEl) {
+        trap = createFocusTrap(modalEl);
+        trap.activate();
+      }
 
       return () => {
         trap.deactivate();
