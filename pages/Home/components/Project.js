@@ -1,7 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 
 import Button from "../../../components/Button/Button";
-import ExpandableImage from "../../../components/ExpandableImage";
+import ExpandableImage from "../../../components/ExpandableImage/ExpandableImage";
 import styles from "./Project.module.css";
 
 const Project = () => {

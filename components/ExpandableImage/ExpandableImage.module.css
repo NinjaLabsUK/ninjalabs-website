@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  cursor: pointer;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+
+.img {
+  width: 100%;
+  border-radius: var(--border-radius-200);
+  box-shadow: var(--shadow-medium);
+  position: absolute;
+}
+
+.message {
+  position: absolute;
+  z-index: 10;
+  font-size: var(--font-size-small);
+  top: var(--spacing-medium);
+  left: var(--spacing-medium);
+  background: rgba(0, 0, 0, 0.8);
+  padding: var(--spacing-smallest) var(--spacing-small);
+  border-radius: var(--border-radius-100);
+}
