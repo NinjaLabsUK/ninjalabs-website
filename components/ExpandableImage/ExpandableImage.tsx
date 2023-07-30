@@ -13,7 +13,7 @@ const variants = {
     width: "100%",
   },
   expanded: {
-    width: "70vw",
+    width: "750px",
   },
 };
 

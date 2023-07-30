@@ -12,6 +12,7 @@
   border-radius: var(--border-radius-200);
   box-shadow: var(--shadow-medium);
   position: absolute;
+  z-index: 20;
 }
 
 .message {
