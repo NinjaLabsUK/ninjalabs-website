@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import NavLinksContainer from "./NavLinksContainer";
 import NavLink from "./NavLink";
 import NavLogo from "./NavLogo";
-import { COLOURS, SPACING, CONTAINER_WIDTH } from "../../styles";
+import styles from "./Navbar.module.css";
 
 const SOCIAL_LINKS = [
   {
@@ -18,24 +18,28 @@ const LINKS = [
     title: "My CV",
     href: "/cv",
   },
+  {
+    title: "Playground",
+    href: "/playground",
+  },
 ];
 
 const Navbar = () => (
-  <nav>
-    <div className="container">
+  <nav className={styles.nav}>
+    <div className={styles.container}>
       <NavLinksContainer>
         {LINKS.map(({ href, title }, index) => (
           <NavLink key={`link-${index}`} title={title} href={href} />
         ))}
       </NavLinksContainer>
-      <NavLogo />
+      <NavLogo className={styles.logo} />
       <NavLinksContainer>
         {SOCIAL_LINKS.map(({ href, icon: Icon, label }, index) => (
           <a
             key={`link-${index}`}
             href={href}
             aria-label={label}
-            className="icon"
+            className={styles.icon}
             target="_blank"
           >
             {Icon}
@@ -43,31 +47,6 @@ const Navbar = () => (
         ))}
       </NavLinksContainer>
     </div>
-    <style jsx>{`
-      nav {
-        background-color: ${COLOURS.darkerGrey};
-      }
-
-      .container {
-        height: 75px;
-        max-width: ${CONTAINER_WIDTH};
-        margin: 0 auto;
-        padding: 0 ${SPACING.medium};
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-      }
-
-      .icon {
-        margin-left: ${SPACING.small};
-        color: ${COLOURS.white};
-      }
-
-      .icon:hover {
-        color: ${COLOURS.primary};
-      }
-    `}</style>
   </nav>
 );
 

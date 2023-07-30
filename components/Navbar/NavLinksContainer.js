@@ -1,14 +1,6 @@
 const NavLinksContainer = ({ children }) => (
-  <div className="container">
+  <div className="container" style={{ display: "flex", zIndex: 1 }}>
     {children}
-    <style jsx>
-      {`
-        .container {
-          display: flex;
-          z-index: 1;
-        }
-      `}
-    </style>
   </div>
 );
 

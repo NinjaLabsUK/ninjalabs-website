@@ -1,0 +1,29 @@
+.nav {
+  background-color: var(--color-darker-grey);
+}
+
+.container {
+  height: 75px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  margin-left: var(--spacing-small);
+  color: var(--color-white);
+}
+
+.icon:hover {
+  color: var(--color-primary);
+}
+
+@media (--small-viewport) {
+  .logo {
+    display: none;
+  }
+}

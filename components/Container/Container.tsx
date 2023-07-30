@@ -1,7 +1,7 @@
 import styles from "./Container.module.css";
 
 type ContainerProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
   className?: string;
   fluid?: boolean;
 };

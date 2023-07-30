@@ -1,0 +1,6 @@
+.divider {
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+  border-color: var(--color-darker-grey);
+  border-radius: var(--border-radius-100);
+}
