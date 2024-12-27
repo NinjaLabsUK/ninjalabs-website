@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { RiCloseLine } from "react-icons/ri";
 import { createFocusTrap } from "focus-trap";
@@ -7,17 +7,17 @@ import Button from "../Button/Button";
 import styles from "./Modal.module.css";
 
 type ModalProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
   title: string;
   onClose: () => null;
 };
 
 type PortalProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
 };
 
 const Portal: React.FC<PortalProps> = ({ children }) => {
-  const portalRef = useRef<HTMLElement>();
+  const portalRef = useRef<HTMLElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
