@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 import styles from "./Accordion.module.css";
 
 type AccordionItem = {
   title: string;
-  content: JSX.Element | string;
+  content: React.ReactNode;
 };
 
 type AccordionProps = {
