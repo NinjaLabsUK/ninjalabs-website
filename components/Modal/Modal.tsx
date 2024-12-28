@@ -1,81 +1,66 @@
-import React, { useRef, useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+import React, { useRef, PropsWithChildren, useEffect } from "react";
 import { RiCloseLine } from "react-icons/ri";
-import { createFocusTrap } from "focus-trap";
+import { createFocusTrap, FocusTrap } from "focus-trap";
 
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
 
-type ModalProps = {
-  children: React.ReactNode;
-  title: string;
-  onClose: () => null;
-};
+interface ModalProps {
+  id: string;
+  title: React.ReactNode;
+}
 
-type PortalProps = {
-  children: React.ReactNode;
-};
-
-const Portal: React.FC<PortalProps> = ({ children }) => {
-  const portalRef = useRef<HTMLElement>(null);
-  const [mounted, setMounted] = useState(false);
+const Modal = ({ id, title, children }: PropsWithChildren<ModalProps>) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const focusTrap = useRef<FocusTrap>(null);
 
   useEffect(() => {
-    const modalEl = document.getElementById("modal");
-    if (modalEl) portalRef.current = modalEl;
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (mounted) {
-      let trap;
-      const modalEl = document.getElementById("modal");
-      if (modalEl) {
-        trap = createFocusTrap(modalEl);
-        trap.activate();
-      }
-
-      return () => {
-        trap.deactivate();
-      };
-    }
-  }, [mounted]);
-
-  return mounted ? createPortal(children, portalRef.current) : [];
-};
-
-const Modal: React.FC<ModalProps> = ({ children, title, onClose }) => {
-  useEffect(() => {
-    const handleKeyPress = (ev: KeyboardEvent) => {
-      if (ev.code === "Escape") onClose();
-    };
-
-    document.addEventListener("keypress", handleKeyPress);
+    setupFocusTrap();
 
     return () => {
-      document.removeEventListener("keypress", handleKeyPress);
+      clearFocusTrap();
     };
   }, []);
 
+  const setupFocusTrap = () => {
+    if (!ref.current) return;
+
+    ref.current.addEventListener("toggle", (event: ToggleEvent) => {
+      if (event.newState === "open" && ref.current) {
+        const trap = createFocusTrap(ref.current);
+        trap.activate();
+        focusTrap.current = trap;
+      } else if (event.newState === "closed") {
+        clearFocusTrap();
+      }
+    });
+  };
+
+  const clearFocusTrap = () => {
+    if (focusTrap.current?.active) {
+      focusTrap.current.deactivate();
+    }
+  };
+
   return (
-    <Portal>
-      <div className={styles.modal}>
-        <div className={styles.wrapper}>
-          <div className={styles.align}>
-            <div className={styles.content}>
-              <button className={styles.close} onClick={onClose}>
-                <RiCloseLine size={30} />
-              </button>
-              {title && <header className={styles.title}>{title}</header>}
-              <div className={styles.text}>{children}</div>
-              <div className={styles.actions}>
-                <Button text="Close" onClick={onClose} variant="tertiary" />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div popover="auto" id={id} className={styles.modal} ref={ref}>
+      <button
+        className={styles.close}
+        popoverTargetAction="hide"
+        popoverTarget={id}
+      >
+        <RiCloseLine size={30} />
+      </button>
+      {title && <header className={styles.title}>{title}</header>}
+      <div className={styles.content}>{children}</div>
+      <div className={styles.actions}>
+        <Button
+          text="Close"
+          variant="tertiary"
+          attributes={{ popoverTarget: id, popoverTargetAction: "hide" }}
+        />
       </div>
-    </Portal>
+    </div>
   );
 };
 

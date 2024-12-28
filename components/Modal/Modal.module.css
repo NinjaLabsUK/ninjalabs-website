@@ -1,39 +1,18 @@
 .modal {
-  position: fixed;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background-color: var(--color-overlay);
-  text-align: center;
-}
-
-.wrapper {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-.align {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.content {
   background-color: var(--color-dark-grey);
   max-width: 500px;
-  color: var(--color-white);
+  width: 100%;
   border-radius: var(--border-radius-200);
-  display: inline-block;
-  text-align: left;
   position: relative;
+}
+
+.modal::backdrop {
+  background-color: var(--color-overlay);
 }
 
 .title {
   padding: var(--spacing-larger);
+  color: var(--color-white);
 }
 
 .close {
@@ -57,10 +36,11 @@
   background-color: var(--color-grey);
 }
 
-.text {
+.content {
   max-height: 360px;
   overflow-y: auto;
   padding: 0 var(--spacing-larger);
+  color: var(--color-white);
 }
 
 .actions {

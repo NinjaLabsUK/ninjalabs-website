@@ -32,13 +32,31 @@ const Heading = () => (
   </div>
 );
 
-const cv = ({ jobs = [] }) => {
-  const [selectedJob, setSelectedJob] = useState(null);
+interface Job {
+  data: {
+    company: string;
+    logoSrc: string;
+    logoWidth: number;
+    logoHeight: number;
+    position: string;
+    colour: string;
+    description: string;
+  };
+  body: string;
+}
+
+interface CVProps {
+  jobs: Job[];
+}
+
+const cv = ({ jobs = [] }: CVProps) => {
+  const [selectedJob, setSelectedJob] = useState<Job>();
 
   return (
     <Layout>
       {selectedJob && (
         <Modal
+          id="job"
           title={
             <Image
               src={selectedJob.data.logoSrc}
@@ -47,7 +65,6 @@ const cv = ({ jobs = [] }) => {
               alt={`Company logo for ${selectedJob.data.company}`}
             />
           }
-          onClose={() => setSelectedJob(null)}
         >
           <div>{selectedJob.body}</div>
         </Modal>
@@ -66,6 +83,7 @@ const cv = ({ jobs = [] }) => {
               description={job.data.description}
               colour={`#${job.data.colour}`}
               onMoreClick={() => setSelectedJob(job)}
+              popoverTarget="job"
             />
           ))}
         </div>
