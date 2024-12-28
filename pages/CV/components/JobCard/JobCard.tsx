@@ -3,20 +3,23 @@ import React from "react";
 import Button from "../../../../components/Button/Button";
 import styles from "./JobCard.module.css";
 
-type JobCardProps = {
+interface JobCardProps {
   companyName: string;
   position: string;
   description: string;
   colour: string;
   onMoreClick: () => void;
-};
-const JobCard: React.FC<JobCardProps> = ({
+  popoverTarget: string;
+}
+
+const JobCard = ({
   companyName,
   position,
   description,
   colour,
   onMoreClick,
-}) => {
+  popoverTarget,
+}: JobCardProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -26,7 +29,12 @@ const JobCard: React.FC<JobCardProps> = ({
           <p className={styles.description}>{description}</p>
         </div>
         <div>
-          <Button text="Read more" onClick={onMoreClick} variant="link" />
+          <Button
+            text="Read more"
+            onClick={onMoreClick}
+            variant="link"
+            attributes={{ popoverTarget, popoverTargetAction: "show" }}
+          />
         </div>
       </div>
       <div

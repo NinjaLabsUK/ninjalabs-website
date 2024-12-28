@@ -10,6 +10,7 @@ type ButtonProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
   endSlot?: React.ReactNode;
+  attributes?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "medium",
   endSlot,
+  attributes,
 }) => {
   const handleClick = () => {
     if (href) {
@@ -32,6 +34,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={`${styles.button} ${styles[variant]} ${styles[size]}`}
       onClick={handleClick}
+      {...attributes}
     >
       {text}
       {endSlot && <div className={styles.endSlot}>{endSlot}</div>}

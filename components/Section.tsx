@@ -1,13 +1,22 @@
 import Container from "./Container/Container";
 import { COLOURS } from "../styles";
+import React from "react";
 
-const Section = ({ children, className, style, light }) => (
+interface SectionProps {
+  className?: string;
+  light?: boolean;
+}
+
+const Section = ({
+  children,
+  className,
+  light,
+}: React.PropsWithChildren<SectionProps>) => (
   <div
     className={className}
     style={{
       backgroundColor: light ? COLOURS.white : COLOURS.darkerGrey,
       color: light ? COLOURS.black : COLOURS.white,
-      ...style,
     }}
   >
     <Container>{children}</Container>
