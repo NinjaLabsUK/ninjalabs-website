@@ -1,6 +1,7 @@
+import React from "react";
+
 import Container from "./Container/Container";
 import { COLOURS } from "../styles";
-import React from "react";
 
 interface SectionProps {
   className?: string;
