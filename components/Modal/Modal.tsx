@@ -1,5 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import React, { useRef, PropsWithChildren, useEffect } from "react";
 import { RiCloseLine } from "react-icons/ri";
+import { createFocusTrap, FocusTrap } from "focus-trap";
 
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
@@ -10,8 +11,39 @@ interface ModalProps {
 }
 
 const Modal = ({ id, title, children }: PropsWithChildren<ModalProps>) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const focusTrap = useRef<FocusTrap>(null);
+
+  useEffect(() => {
+    setupFocusTrap();
+
+    return () => {
+      clearFocusTrap();
+    };
+  }, []);
+
+  const setupFocusTrap = () => {
+    if (!ref.current) return;
+
+    ref.current.addEventListener("toggle", (event: ToggleEvent) => {
+      if (event.newState === "open" && ref.current) {
+        const trap = createFocusTrap(ref.current);
+        trap.activate();
+        focusTrap.current = trap;
+      } else if (event.newState === "closed") {
+        clearFocusTrap();
+      }
+    });
+  };
+
+  const clearFocusTrap = () => {
+    if (focusTrap.current?.active) {
+      focusTrap.current.deactivate();
+    }
+  };
+
   return (
-    <div popover="auto" id={id} className={styles.modal}>
+    <div popover="auto" id={id} className={styles.modal} ref={ref}>
       <button
         className={styles.close}
         popoverTargetAction="hide"
