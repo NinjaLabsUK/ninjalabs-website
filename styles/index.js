@@ -4,20 +4,6 @@ export const BREAKPOINTS = {
   desktop: "1024px",
 };
 
-export const COLOURS = {
-  white: "#FFFFFF",
-  black: "#000000",
-  darkerGrey: "#0f0f0f",
-  darkGrey: "#141414",
-  grey: "#525252",
-  lightGrey: "#e8e8e8",
-  blue: "#1d57f5",
-  lightBlue: "#24a6ff",
-  primary: "#fbe102",
-  primaryDark: "#ebd202",
-  overlay: "rgba(0, 0, 0, 0.75)",
-};
-
 export const SPACING = {
   smaller: "4px",
   small: "8px",
@@ -35,12 +21,3 @@ export const FONT_SIZE = {
   larger: "30px",
   largest: "42px",
 };
-
-export const SHADOWS = {
-  light: "0 5px 10px rgba(0,0,0,0.12)",
-  medium: "0 5px 10px rgba(0,0,0,0.4)",
-};
-
-export const BORDER_RADIUS = "3px";
-
-export const CONTAINER_WIDTH = "1024px";

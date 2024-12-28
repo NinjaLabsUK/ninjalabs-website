@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import FastestLap from "./FastestLap";
+import FastestLap from "./FastestLap/FastestLap";
 import Button from "../../../components/Button/Button";
 import { FONT_SIZE, SPACING, BREAKPOINTS } from "../../../styles";
 

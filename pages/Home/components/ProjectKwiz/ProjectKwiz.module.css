@@ -1,0 +1,30 @@
+.container {
+  margin: var(--spacing-larger) 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  flex: 0 0 400px;
+  text-align: center;
+}
+
+.title {
+  color: var(--colors-white);
+  font-weight: bold;
+}
+
+.description {
+  padding: var(--spacing-larger);
+}
+
+@media (--medium-viewport) {
+  .thumbnail {
+    display: none;
+  }
+
+  .description {
+    padding: var(--spacing-larger) 0;
+  }
+}
