@@ -1,9 +1,3 @@
-export const BREAKPOINTS = {
-  mobile: "576px",
-  tablet: "768px",
-  desktop: "1024px",
-};
-
 export const SPACING = {
   smaller: "4px",
   small: "8px",
