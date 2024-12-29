@@ -1,7 +1,6 @@
 import { FaChevronRight } from "react-icons/fa";
 
 import Button from "../../../../components/Button/Button";
-import { SPACING, FONT_SIZE } from "../../../../styles";
 import styles from "./ProjectKwiz.module.css";
 
 const Project2 = () => {
@@ -15,14 +14,9 @@ const Project2 = () => {
         />
       </div>
 
-      <div className={styles.description}>
+      <div className={styles.descriptionContainer}>
         <h2 className={styles.title}>Kwizgame.com</h2>
-        <p
-          style={{
-            fontSize: FONT_SIZE.large,
-            marginBottom: SPACING.medium,
-          }}
-        >
+        <p className={styles.description}>
           Host and manage a quiz or join and battle your friends with realtime
           leaderboards.
           <br />
