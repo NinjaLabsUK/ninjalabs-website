@@ -4,6 +4,7 @@
   width: 100%;
   border-radius: var(--border-radius-200);
   position: relative;
+  border: none;
 }
 
 .modal::backdrop {
