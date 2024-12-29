@@ -1,0 +1,45 @@
+.fastestLap {
+  color: var(--color-white);
+  height: 80px;
+  font-size: var(--font-size-large);
+  position: relative;
+}
+
+.container {
+  box-shadow: var(--shadow-light);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details {
+  box-shadow: var(--shadow-light);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+.firstName {
+  margin-bottom: 0;
+}
+
+.lastName {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.time {
+  padding-left: var(--spacing-large);
+  font-size: var(--font-size-larger);
+  font-weight: bold;
+  flex: 1;
+  padding-right: var(--spacing-large);
+}
