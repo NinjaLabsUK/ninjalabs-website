@@ -1,5 +1,4 @@
 .accordion {
-  border-radius: var(--border-radius-200);
   box-shadow: var(--shadow-light);
   width: 100%;
   border: 1px solid var(--color-grey);
@@ -25,7 +24,7 @@
   text-align: left;
   border: none;
   width: 100%;
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-darker-grey);
   font-size: var(--font-size-medium);
   font-weight: bold;
   padding: var(--spacing-medium);
@@ -34,7 +33,7 @@
 }
 
 .button:hover {
-  background-color: var(--color-darker-grey);
+  background-color: var(--color-dark-grey);
 }
 
 .iconContainer {
@@ -46,7 +45,7 @@
 .content {
   width: 100%;
   padding: var(--spacing-medium);
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-darker-grey);
   display: none;
   font-size: var(--font-size-small);
 }
