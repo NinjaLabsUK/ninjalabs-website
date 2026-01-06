@@ -1,23 +1,15 @@
-import { Open_Sans, Bebas_Neue } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 
 import Navbar from "../components/Navbar";
 import Container from "../components/Container/Container";
 import "../styles/variables.css";
 import "../styles/styles.css";
 
-// If loading a variable font, you don't need to specify the font weight
-const openSans = Open_Sans({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
 });
-
-/* const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  style: "normal",
-  display: "swap",
-  weight: "400",
-}); */
 
 /* <meta name="msapplication-TileColor" content="#ffffff" />
 <meta
@@ -28,7 +20,7 @@ content="/icons/ms-icon-144x144.png"
 
 export const metadata = {
   title: "Ninja Labs",
-  description: "Built by Kieran, a place to showcase my work!",
+  description: "Built by Kieran",
 };
 
 export default function RootLayout({
@@ -37,10 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={openSans.className}>
+    <html lang="en" className={robotoMono.className}>
       <body>
-        <Navbar />
-        <Container>{children}</Container>
+        <div>
+          <Navbar />
+          <Container>{children}</Container>
+        </div>
       </body>
     </html>
   );

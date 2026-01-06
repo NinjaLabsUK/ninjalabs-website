@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 import "../styles/variables.css";
-import "../styles/oldStyles.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (

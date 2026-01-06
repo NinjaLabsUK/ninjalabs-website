@@ -22,10 +22,10 @@
   "homepage": "https://github.com/NinjaLabsUK/ninjalabs-website#readme",
   "dependencies": {
     "date-fns": "^2.30.0",
-    "express": "^4.21.2",
+    "express": "^5.2.1",
     "focus-trap": "^7.6.2",
     "gray-matter": "^4.0.2",
-    "motion": "^11.15.0",
+    "motion": "^12.24.7",
     "next": "^16.1.1",
     "postcss-custom-media": "^8.0.2",
     "raw-loader": "^4.0.2",
@@ -34,8 +34,8 @@
     "react-icons": "^4.10.1"
   },
   "devDependencies": {
-    "@types/node": "20.4.5",
-    "@types/react": "19.0.2",
+    "@types/node": "^24.10.4",
+    "@types/react": "^19.2.7",
     "typescript": "^5.7.2"
   }
 }

@@ -1,5 +1,4 @@
 .button {
-  border-radius: var(--border-radius-100);
   padding: var(--spacing-small) var(--spacing-large);
   font-size: var(--font-size-medium);
   cursor: pointer;
