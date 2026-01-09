@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
       {...attributes}
     >
       {text}
-      {endSlot && <div className={styles.endSlot}>{endSlot}</div>}
+      {endSlot}
     </button>
   );
 };

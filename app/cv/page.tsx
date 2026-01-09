@@ -4,6 +4,7 @@ import Image from "next/image";
 import employment from "./data/employment";
 import Reveal from "./components/Reveal";
 import Accordion from "../../components/Accordion/Accordion";
+import Divider from "../../components/Divider/Divider";
 
 interface SectionProps {
   title?: string;
@@ -25,7 +26,7 @@ const Section = ({
 
 const CV = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
       <Section
         style={{
           display: "flex",
@@ -41,6 +42,8 @@ const CV = () => {
         <Image src="/img/me_square.jpeg" width={55} height={55} alt="Me" />
       </Section>
 
+      <Divider />
+
       <Section
         title="Employment"
         style={{ display: "flex", flexDirection: "column", gap: 12 }}
@@ -49,12 +52,14 @@ const CV = () => {
           return (
             <div key={e.company.toLocaleLowerCase()}>
               <h3>{e.company}</h3>
-              <p>{e.position}</p>
+              <p style={{ marginBlockEnd: 4 }}>{e.position}</p>
               <Reveal title="View Details">{e.description}</Reveal>
             </div>
           );
         })}
       </Section>
+
+      <Divider />
 
       <Section title="Education">
         <Accordion
