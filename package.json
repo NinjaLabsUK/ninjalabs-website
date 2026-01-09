@@ -4,10 +4,10 @@
   "description": "Ninja Labs Website",
   "main": "index.js",
   "scripts": {
-    "now-build": "next build --webpack",
-    "build": "next build --webpack",
+    "now-build": "next build",
+    "build": "next build",
     "dev": "node server.js",
-    "start": "next --webpack"
+    "start": "next"
   },
   "repository": {
     "type": "git",
@@ -21,21 +21,18 @@
   },
   "homepage": "https://github.com/NinjaLabsUK/ninjalabs-website#readme",
   "dependencies": {
-    "date-fns": "^2.30.0",
     "express": "^5.2.1",
-    "focus-trap": "^7.6.2",
-    "gray-matter": "^4.0.2",
-    "motion": "^12.24.7",
+    "focus-trap": "^7.7.1",
+    "motion": "^12.25.0",
     "next": "^16.1.1",
     "postcss-custom-media": "^8.0.2",
-    "raw-loader": "^4.0.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-icons": "^4.10.1"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.4",
     "@types/react": "^19.2.7",
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.3"
   }
 }

@@ -26,6 +26,12 @@ a {
   color: var(--color-light-blue);
 }
 
+a:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0;

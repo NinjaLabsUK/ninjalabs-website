@@ -1,7 +1,9 @@
+import { PropsWithChildren } from "react";
 import Image from "next/image";
 
+import employment from "./data/employment";
+import Reveal from "./components/Reveal";
 import Accordion from "../../components/Accordion/Accordion";
-import { PropsWithChildren } from "react";
 
 interface SectionProps {
   title?: string;
@@ -41,22 +43,17 @@ const CV = () => {
 
       <Section
         title="Employment"
-        style={{ display: "flex", flexDirection: "column", gap: 8 }}
+        style={{ display: "flex", flexDirection: "column", gap: 12 }}
       >
-        <div>
-          <h3>Booking.com</h3>
-          <p>Senior Frontend Engineer</p>
-        </div>
-
-        <div>
-          <h3>The Robert Street Hub</h3>
-          <p>Software Developer</p>
-        </div>
-
-        <div>
-          <h3>ADXBA</h3>
-          <p>Software Developer</p>
-        </div>
+        {employment.map((e) => {
+          return (
+            <div key={e.company.toLocaleLowerCase()}>
+              <h3>{e.company}</h3>
+              <p>{e.position}</p>
+              <Reveal title="View Details">{e.description}</Reveal>
+            </div>
+          );
+        })}
       </Section>
 
       <Section title="Education">
