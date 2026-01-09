@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import FastestLap from "../components/FastestLap/FastestLap";
 import Badge from "../components/Badge/Badge";
 
@@ -9,7 +11,7 @@ const Home = () => {
         <p>
           Senior Frontend Engineer <Badge text="@Booking.com" />
         </p>
-        <a href="/cv">View CV</a>
+        <Link href="/cv">View CV</Link>
       </section>
 
       <section>

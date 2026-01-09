@@ -57,3 +57,7 @@ h1 {
 h2 {
   font-size: var(--font-size-larger);
 }
+
+ul {
+  list-style-position: inside;
+}

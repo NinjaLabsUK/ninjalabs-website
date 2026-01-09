@@ -1,6 +1,6 @@
 import { Roboto_Mono } from "next/font/google";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import Container from "../components/Container/Container";
 import "../styles/variables.css";
 import "../styles/styles.css";
@@ -30,6 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={robotoMono.className}>
+      <link rel="icon" href="/icons/favicon.ico" sizes="any" />
       <body>
         <div>
           <Navbar />
