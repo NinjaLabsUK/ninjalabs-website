@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 import NavLinksContainer from "./NavLinksContainer";
 import styles from "./Navbar.module.css";
+import Container from "../Container/Container";
 
 const SOCIAL_LINKS = [
   {
@@ -15,9 +16,9 @@ const SOCIAL_LINKS = [
 
 const Navbar = () => (
   <nav>
-    <div className={styles.container}>
+    <Container className={styles.container}>
       <Link href="/">
-        <Image src="/img/logo-white.svg" alt="Logo" width={150} height={80} />
+        <Image src="/img/logo-white.svg" alt="Logo" width={120} height={36} />
       </Link>
       <NavLinksContainer>
         {SOCIAL_LINKS.map(({ href, icon: Icon, label }, index) => (
@@ -32,7 +33,7 @@ const Navbar = () => (
           </a>
         ))}
       </NavLinksContainer>
-    </div>
+    </Container>
   </nav>
 );
 

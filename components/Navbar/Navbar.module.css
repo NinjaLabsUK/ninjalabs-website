@@ -1,8 +1,4 @@
 .container {
-  height: 75px;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
