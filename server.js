@@ -13,11 +13,11 @@ app.prepare().then(() => {
     return app.render(req, res, "/post", { id: req.params.id });
   });
 
-  server.all("*", (req, res) => {
+  server.all("*splat", (req, res) => {
     return handle(req, res);
   });
 
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });

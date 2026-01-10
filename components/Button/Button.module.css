@@ -1,24 +1,22 @@
 .button {
-  border-radius: var(--border-radius-100);
-  padding: var(--spacing-small) var(--spacing-large);
+  padding: var(--spacing-smallest) var(--spacing-small);
   font-size: var(--font-size-medium);
   cursor: pointer;
   border: none;
   background: none;
   display: flex;
   transition: all 0.2s ease-in;
-}
-
-.endSlot {
-  margin-left: var(--spacing-smaller);
+  align-items: center;
+  gap: var(--spacing-smaller);
 }
 
 .primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-light-blue);
 }
 
 .primary:hover {
-  background-color: var(--color-dark-primary);
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .link {

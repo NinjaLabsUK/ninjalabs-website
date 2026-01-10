@@ -40,7 +40,3 @@ export const SHADOWS = {
   light: "0 5px 10px rgba(0,0,0,0.12)",
   medium: "0 5px 10px rgba(0,0,0,0.4)",
 };
-
-export const BORDER_RADIUS = "3px";
-
-export const CONTAINER_WIDTH = "1024px";

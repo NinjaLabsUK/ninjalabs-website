@@ -12,9 +12,10 @@
   --color-overlay: rgba(0, 0, 0, 0.75);
 
   --font-size-small: 14px;
-  --font-size-large: 20px;
-  --font-size-larger: 30px;
-  --font-size-largest: 42px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+  --font-size-larger: 20px;
+  --font-size-largest: 24px;
 
   --spacing-smallest: 2px;
   --spacing-smaller: 4px;

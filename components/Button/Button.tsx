@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Button.module.css";
 
 type ButtonVariant = "primary" | "link" | "tertiary";
@@ -37,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
       {...attributes}
     >
       {text}
-      {endSlot && <div className={styles.endSlot}>{endSlot}</div>}
+      {endSlot}
     </button>
   );
 };
