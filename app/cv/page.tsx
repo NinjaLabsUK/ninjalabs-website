@@ -29,7 +29,7 @@ const Section = ({
 const CV = () => {
   return (
     <>
-      <div>
+      <div style={{ marginBlockEnd: 16 }}>
         <Link href="/">
           <FaChevronLeft size={10} />
           Back to Home
