@@ -8,6 +8,7 @@
   transition: all 0.2s ease-in;
   align-items: center;
   gap: var(--spacing-smaller);
+  color: var(--color-darker-grey);
 }
 
 .primary {
